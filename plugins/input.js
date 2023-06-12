@@ -12,13 +12,13 @@ module.exports = plugin(({ addComponents, matchComponents, theme }) => {
       },
 
       '& .input:first-child': {
-        borderTopLeftRadius: '8px',
-        borderBottomLeftRadius: '8px',
+        borderTopLeftRadius: '150px',
+        borderBottomLeftRadius: '150px',
       },
 
       '& .input:last-child': {
-        borderTopRightRadius: '8px',
-        borderBottomRightRadius: '8px',
+        borderTopRightRadius: '150px',
+        borderBottomRightRadius: '150px',
       },
     },
 
@@ -53,7 +53,7 @@ module.exports = plugin(({ addComponents, matchComponents, theme }) => {
       },
 
       '&--error': {
-        borderColor: theme('colors.red.DEFAULT'),
+        borderColor: theme('colors.primary.DEFAULT'),
       },
 
       '&:-webkit-autofill': {

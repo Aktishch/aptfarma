@@ -1,6 +1,6 @@
 <% var data = {
 
-  title: 'My library',
+  title: 'Aptfarma',
   status: true
 
 } %>
@@ -9,47 +9,240 @@
 
 <!-- Главный блок -->
 
-<main class="container flex flex-col items-center justify-center min-h-[500px] lg:min-h-[600px]" id="header">
-  <img class="block mb-10" data-gsap="right" src="img/pictures/logo.svg" alt="">
-  <h1 class="font-alt font-bold text-center text-48 lg:text-6xl leading-2 mb-5 md:mb-10" data-movement="blend">Main block</h1>
-  <a class="btn btn-primary btn-lg btn-fill btn-glow max-w-[200px] w-full mx-auto" data-waved="light" data-scroll="top" href="#content">Show more</a>
+<main class="container relative overflow-hidden pt-28 pb-10 xs:pt-32 sm:pt-36 md:pb-0 xl:pt-52">
+  <div class="absolute inset-0" data-speed="1.1">
+    <img class="hidden lg:block absolute left-1/2 -top-2 xl:-top-5 -translate-x-1/2 w-full max-w-[100px] xl:max-w-[140px]" src="img/pictures/jar.svg" alt="">
+    <img class="hidden lg:block absolute -top-[100px] xl:-top-[100px] -left-[100px] xl:-left-[250px] w-full max-w-[300px] xl:max-w-[560px]" src="img/pictures/tablet.svg" alt="">
+    <img class="hidden md:block absolute left-4 xl:left-[96px] bottom-[500px] xl:bottom-[210px] w-full max-w-[100px] lg:max-w-[200px]" src="img/pictures/pack.svg" alt="">
+    <img class="hidden md:block absolute right-8 bottom-[210px] w-full max-w-[100px] lg:max-w-[230px]" src="img/pictures/syringe.svg" alt="">
+  </div>
+  <div class="relative">
+    <h3 class="font-normal text-14 md:text-18 leading-3 mb-3 duration-5 anim anim--right" data-anim="hidden">Первая аптечная управленческая франшиза</h3>
+    <div class="flex mb-5 md:mb-10 xl:-mb-14">
+      <h1 class="font-medium uppercase text-26 sm:text-30 md:text-36 lg:text-42 leading-3 xl:mr-10 duration-5 delay-1 anim anim--right" data-anim="hidden">
+        СТАНЬТЕ ЧАСТЬЮ УСПЕШНОЙ <br class="hidden lg:block"> АПТЕЧНОЙ СЕТИ И <b>ПОЛУЧИТЕ <br class="hidden lg:block"> ЭКСКЛЮЗИВНЫЕ ПРЕИМУЩЕСТВА</b>
+      </h1>
+      <div class="hidden xl:block pack pack-box z-1 bg-grey rounded-[40px_500px_500px_500px] border-[3px] border-solid border-white shadow-lg w-full max-w-[255px] duration-7 anim anim--left" data-movement="light" data-anim="hidden">
+        <div class="loader">
+          <span class="loader-progress">
+            <svg class="loader-icon icon">
+              <use xlink:href="img/icons.svg#loader">
+            </svg>
+          </span>
+        </div>
+        <picture>
+          <source srcset="img/pictures/main-img-2.webp" type="image/webp">
+          <img class="image image-rise" loading="lazy" src="img/pictures/main-img-2.jpg" alt="">
+        </picture>
+      </div>
+    </div>
+    <div class="flex flex-col xl:flex-row xl:justify-between">
+      <div class="order-2 xl:order-1 flex flex-col items-start">
+        <div class="flex flex-col gap-3 sm:mb-5 xl:mb-14 duration-5 delay-2 anim anim--right" data-anim="hidden">
+          <div class="flex items-center">
+            <span class="icon bg-second rounded-max text-10 mr-3"></span>
+            <span class="font-normal text-18 sm:text-20 md:text-24 leading-2">Известный бренд</span>
+          </div>
+          <div class="flex items-center">
+            <span class="icon bg-second rounded-max text-10 mr-3"></span>
+            <span class="font-normal text-18 sm:text-20 md:text-24 leading-2">Лучшие условия по маркетингу от поставщиков</span>
+          </div>
+          <div class="flex items-center">
+            <span class="icon bg-second rounded-max text-10 mr-3"></span>
+            <span class="font-normal text-18 sm:text-20 md:text-24 leading-2">Без паушального взноса и роялти</span>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row md:items-center relative w-full md:w-auto">
+          <div class="order-2 md:order-1 ml-auto mr-auto md:ml-0 md:mr-7 duration-5 delay-3 anim anim--right" data-anim="hidden">
+            <button class="btn btn-primary btn-lg sm:btn-xl btn-fill uppercase text-18 sm:text-24" data-waved="light">
+              СКАЧАТЬ ПРЕЗЕНТАЦИЮ
+              <svg class="icon hidden sm:block text-28 ml-2">
+                <use xlink:href="img/icons.svg#download">
+              </svg>
+            </button>
+          </div>
+          <div class="order-1 md:order-2 relative w-full max-w-[260px] md:max-w-[190px] mx-auto md:mx-0 duration-5 delay-4 anim anim--up" data-anim="hidden">
+            <div class="pack pack-rect-lg">
+              <picture>
+                <source srcset="img/pictures/presentation.webp" type="image/webp">
+                <img class="image md:image-right" src="img/pictures/presentation.png" alt="">
+              </picture>
+            </div>
+            <p class="relative -top-6 font-normal text-center md:text-left text-16 leading-2">
+              31 слайд о том, <span class="font-semibold">как мы изменим ваш бизнес</span>
+            </p>
+            <img class="hidden md:block absolute -left-[120px] bottom-6 w-[100px]" src="img/pictures/arrow.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="order-1 xl:order-2 pack pack-box bg-grey rounded-[40px_500px_500px_500px] border-[3px] border-solid border-white shadow-lg w-full max-w-[600px] xl:max-w-[435px] mb-7 sm:mb-10 xl:mb-0 mx-auto xl:mx-0 duration-7 delay-2 anim anim--left" data-movement="light" data-anim="hidden">
+        <div class="loader">
+          <span class="loader-progress">
+            <svg class="loader-icon icon">
+              <use xlink:href="img/icons.svg#loader">
+            </svg>
+          </span>
+        </div>
+        <picture>
+          <source srcset="img/pictures/main-img-1.webp" type="image/webp">
+          <img class="image image-rise" loading="lazy" src="img/pictures/main-img-1.jpg" alt="">
+        </picture>
+      </div>
+    </div>
+  </div>
 </main>
 
-<!-- Статьи -->
+<!-- Преимущества -->
 
-<% var articles = [
+<% var advantages = [
   {
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam repudiandae maxime quia culpa, est voluptatum hic at ipsa error officiis magni dolores molestiae inventore ipsum perferendis reiciendis sunt nesciunt possimus?'
+    icon: 'img/pictures/pill-grey.svg',
+    bg: 'bg-primary',
+    title: 'Обычная аптека',
+    bold: 'font-normal',
+    listing: [
+      'Высокая конкуренция',
+      'Стагнация или падение прибыли',
+      'Недостаток компетентных кадров',
+      'до 3% маркетинг от закупки',
+      'Предоплата или отсрочка платежа до 7 дней у поставщиков'
+    ]
   },
   {
-    item: '',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+    icon: 'img/pictures/pill-red-blue.svg',
+    bg: 'bg-second',
+    title: 'Аптека Фарма',
+    bold: 'font-semibold',
+    listing: [
+      'Широкая известность и лояльность среди покупателей',
+      'Чистая прибыль 7% от оборота',
+      '>30 экспертов-управленцев',
+      '7-8% маркетинга от общих закупок ',
+      'Отсрочка платежа до 45 дней'
+    ]
   },
-  {
-    item: '',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam repudiandae maxime quia culpa, est voluptatum hic at ipsa error officiis magni dolores molestiae inventore ipsum perferendis reiciendis sunt nesciunt possimus? Lorem ipsum dolor sit amet consectetur adipisicing elit.'
-  },
-  {
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam repudiandae maxime quia culpa, est voluptatum hic at ipsa error officiis magni dolores molestiae inventore ipsum perferendis reiciendis sunt nesciunt possimus?'
-  },
-  {
-    item: '',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
-  },
-  {
-    item: '',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam repudiandae maxime quia culpa, est voluptatum hic at ipsa error officiis magni dolores molestiae inventore ipsum perferendis reiciendis sunt nesciunt possimus? Lorem ipsum dolor sit amet consectetur adipisicing elit.'
-  }
 ] %>
 
-<section class="container container--xs container--distance flex flex-col items-center justify-center bg-grey dark:bg-dark" data-listing="1" id="content">
-  <h2 class="font-alt font-bold text-center text-36 lg:text-48 leading-2 mb-3" data-movement="blend">Cards</h2>
-  <h3 class="font-semibold text-16 md:text-18 leading-2 mb-5 md:mb-10" data-movement="blend">Construction and effect</h3>
-  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 xl:gap-8 w-full mb-5 md:md-10">
-    <% for (var i = 0; i < 3; i++) { %>
-    <div class="<% if (articles[i].item) { %><%= articles[i].item %><% } %>">
-      <article class="card h-full dark:bg-black">
-        <div class="pack pack-rect-md bg-grey dark:bg-dark" data-movement="light">
+<section class="container relative overflow-hidden">
+  <div class="absolute inset-0" data-speed="1.1">
+    <img class="hidden lg:block absolute top-[100px] xl:top-[220px] xl:-left-5 w-full max-w-[150px] xl:max-w-[305px]" src="img/pictures/pill-big.svg" alt="">
+    <img class="hidden lg:block absolute bottom-5 right-0 xl:-right-20 w-full max-w-[150px] xl:max-w-[390px]" src="img/pictures/tube.svg" alt="">
+  </div>
+  <div class="relative">
+    <h2 class="font-semibold uppercase text-26 sm:text-30 md:text-36 leading-3 mb-4 duration-5 anim anim--right" data-anim="hidden">ЧТО ТАКОЕ УПРАВЛЕНЧЕСКАЯ ФРАНШИЗА?</h2>
+    <h3 class="font-normal text-14 md:text-16 leading-5 mb-7 lg:mb-14 duration-5 anim anim--right" data-anim="hidden">
+      К вашей аптеке подключаем налаженные бизнес-процессы, известный бренд <br class="hidden md:block">
+      и лучшие условия от поставщиков. Результат - ваш бизнес растет и развивается <br class="hidden md:block">
+      при минимальном личном  участии в операционке.
+    </h3>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-9">
+      <% for (var i = 0; i < advantages.length; i++) { %>
+      <div class="flex flex-col">
+        <div class="flex items-center mb-6 md:mb-9 duration-5 anim anim--up" data-anim="hidden">
+          <div class="flex items-center justify-center relative bg-white rounded-max shadow-lg w-[90px] min-w-[90px] h-[90px] md:w-[115px] md:min-w-[115px] md:h-[115px]" data-waved="dark">
+            <img class="icon text-6xl md:text-7xl" src="<%= advantages[i].icon %>" alt="">
+          </div>
+          <div class="flex items-center justify-center <%= advantages[i].bg %> text-white rounded-[26px_0px_26px_26px] w-full min-h-[60px] md:min-h-[85px] p-3 -ml-[45px] md:-ml-[57px]">
+            <h4 class="font-bold text-center text-20 xs:text-24 md:text-30 leading-3"><%= advantages[i].title %></h4>
+          </div>
+        </div>
+        <div class="flex flex-col gap-4">
+          <% for (var j = 0; j < advantages[i].listing.length; j++) { %>
+          <div class="duration-5 anim anim--up" data-anim="hidden">
+            <div class="card rounded-[26px_0px_26px_26px] min-h-[75px] md:min-h-[95px] py-4 px-4 md:py-5 md:px-9" data-waved="dark">
+              <div class="card-content justify-center">
+                <p class="<%= advantages[i].bold %> text-16 leading-5"><%= advantages[i].listing[j] %></p>
+              </div>
+            </div>
+          </div>
+          <% } %>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<!-- Условия -->
+
+<% var conditions = [
+  {
+    hidden: '',
+    delay: '',
+    data: '',
+    title: 'Управляем всеми процессами',
+    icon: 'img/icons.svg#arrows',
+    text: 'От ассортимента и ценообразования до кадров и хозяйственного блока.'
+  },
+  {
+    hidden: '',
+    delay: 'xl:delay-2',
+    data: '',
+    title: 'Бизнес остаётся за вами',
+    icon: 'img/icons.svg#case',
+    text: 'Работаем без изменений в уставных документах.'
+  },
+  {
+    hidden: 'hidden sm:block',
+    delay: '',
+    data: 'data-listing-item',
+    title: 'Делаем частью известного бренда',
+    icon: 'img/icons.svg#planet',
+    text: 'Только в сети Интернет наши аптеки ищут более 100 000 человек в месяц.'
+  },
+  {
+    hidden: 'hidden sm:block',
+    delay: 'xl:delay-2',
+    data: 'data-listing-item',
+    title: '100% прибыли отдаем вам',
+    icon: 'img/icons.svg#money',
+    text: 'Мы получаем только фиксированную оплату за управление каждой аптекой.'
+  },
+  {
+    hidden: 'hidden sm:block',
+    delay: '',
+    data: 'data-listing-item',
+    title: 'Результат заметен с 1 месяца',
+    icon: 'img/icons.svg#marketing',
+    text: 'За счет увеличения маркетинга до 7-8% от закупки и отсрочки платежа до 45 дней.'
+  },
+  {
+    hidden: 'hidden sm:block',
+    delay: 'xl:delay-2',
+    data: 'data-listing-item',
+    title: 'Без паушального взноса и роялти',
+    icon: 'img/icons.svg#rocket',
+    text: 'Просто начать и легко выйти, если вас что-либо не устроит.'
+  },
+] %>
+
+<section class="container container--xs relative overflow-hidden">
+  <div class="absolute inset-0" data-speed="1.1">
+    <img class="hidden lg:block absolute -left-[50px] bottom-[200px] w-full max-w-[200px] xl:max-w-[360px]" src="img/pictures/thermometer.svg" alt="">
+    <img class="hidden lg:block absolute -right-[64px] bottom-[120px] w-full max-w-[200px] xl:max-w-[320px]" src="img/pictures/patch.svg" alt="">
+  </div>
+  <div class="relative" data-listing="2">
+    <h2 class="font-semibold uppercase text-26 sm:text-30 md:text-36 leading-3 mb-7 lg:mb-14 duration-5 anim anim--right" data-anim="hidden">ПРОЗРАЧНЫЕ И ВЫГОДНЫЕ УСЛОВИЯ</h2>
+    <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-7">
+      <div class="xl:col-2 grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-7">
+        <% for (var i = 0; i < conditions.length; i++) { %>
+        <div class="<%= conditions[i].hidden %> duration-5 <%= conditions[i].delay %> anim anim--right" data-anim="hidden" <%= conditions[i].data %>>
+          <div class="card rounded-[26px_26px_0px_26px] h-full" data-waved="dark">
+            <div class="flex items-center justify-between gap-3 bg-primary text-white rounded-[26px_26px_0px_26px] min-h-[60px] sm:min-h-[84px] py-4 pl-3 pr-3 md:pr-4 md:pl-6">
+              <h4 class="font-semibold text-18 md:text-24 leading-1"><%= conditions[i].title %></h4>
+              <svg class="icon text-24 md:text-28">
+                <use xlink:href="<%= conditions[i].icon %>">
+              </svg>
+            </div>
+            <div class="card-content pt-4 px-4 pb-6 md:px-6">
+              <p class="font-normal text-14 md:text-16 leading-5 w-full xl:max-w-[280px]"><%= conditions[i].text %></p>
+            </div>
+          </div>
+        </div>
+        <% } %>
+      </div>
+      <div class="hidden xl:block col-1">
+        <div class="pack pack-box bg-grey rounded-[40px_500px_500px_500px] border-[3px] border-solid border-white shadow-lg h-full duration-7 anim anim--left" data-movement="light" data-anim="hidden">
           <div class="loader">
             <span class="loader-progress">
               <svg class="loader-icon icon">
@@ -58,428 +251,261 @@
             </span>
           </div>
           <picture>
-            <img class="image image-rise" src="https://picsum.photos/600/400?random=<%= i %>" loading="lazy" alt="">
+            <source srcset="img/pictures/conditions-img.webp" type="image/webp">
+            <img class="image image-rise" loading="lazy" src="img/pictures/conditions-img.jpg" alt="">
           </picture>
         </div>
-        <div class="card-content py-5 px-3 md:px-5">
-          <h4 class="font-alt font-semibold text-24 mb-4">Article <%= i %></h4>
-          <p class="text-justify text-14 md:text-16 leading-5 mb-5"><%= articles[i].text %></p>
-          <button class="btn btn-primary btn-lg btn-fill mt-auto" data-waved="light">Button</button>
-        </div>
-      </article>
+      </div>
     </div>
-    <% } %>
-  </div>
-  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 xl:gap-8 w-full">
-    <% for (var i = 3; i < articles.length; i++) { %>
-    <div class="hidden sm:block <% if (articles[i].item) { %><%= articles[i].item %><% } %>" data-listing-item>
-      <article class="inverted h-full">
-        <div class="inverted-before card dark:bg-black">
-          <div class="pack pack-half bg-grey dark:bg-dark">
-            <div class="loader">
-              <span class="loader-progress">
-                <svg class="loader-icon icon">
-                  <use xlink:href="img/icons.svg#loader">
-                </svg>
-              </span>
-            </div>
-            <picture>
-              <img class="image" src="https://picsum.photos/600/400?random=<%= i %>" loading="lazy" alt="">
-            </picture>
-          </div>
-          <div class="card-content py-5 px-3 md:px-5">
-            <h4 class="font-alt font-semibold text-24">Article <%= i %></h4>
-          </div>
-        </div>
-        <div class="inverted-after card dark:bg-black">
-          <div class="card-content py-5 px-3 md:px-5">
-            <h4 class="font-alt font-semibold text-24 mb-4">Article <%= i %></h4>
-            <p class="text-justify text-14 md:text-16 leading-5 mb-5"><%= articles[i].text %></p>
-            <button class="btn btn-primary btn-lg btn-fill mt-auto" data-waved="light">Button</button>
-          </div>
-        </div>
-      </article>
+    <div class="sm:hidden duration-5 anim anim--up" data-anim="hidden">
+      <button class="btn btn-second btn-md btn-fill mx-auto mt-10" data-listing-show>Показать ещё</button>
     </div>
-    <% } %>
-  </div>
-  <button class="btn btn-second btn-lg btn-fade sm:hidden max-w-[200px] w-full mt-5 mx-auto" data-listing-show data-waved="dark">Show more</button>
-</section>
-
-<!-- Кнопки -->
-
-<% var buttons = ['', 'btn-contur', 'btn-fade', 'btn-contur btn-fade', 'btn-fill', 'btn-light', 'btn-xxl', 'btn-xl', 'btn-lg', 'btn-md', 'btn-sm', 'btn-xs', 'btn-contur btn-swipe', 'btn-fill btn-glow', 'data-waved="light"', 'data-waved="dark"', 'data-bubbles="hidden"', 'btn-rect', 'btn-frame', 'btn-lines'] %>
-
-<section class="container container--xs flex flex-col items-center justify-center overflow-hidden">
-  <h2 class="font-alt font-bold text-center text-36 lg:text-48 leading-2 mb-3" data-movement="blend">Buttons</h2>
-  <h3 class="font-semibold text-16 md:text-18 leading-2 mb-5 md:mb-10" data-movement="blend">Buttons standard</h3>
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 w-full mb-5 md:mb-10">
-    <% for (var i = 0; i < 6; i++) { %>
-    <button class="btn btn-primary btn-lg <%= buttons[i] %>">btn--primary <%= buttons[i] %></button>
-    <% } %>
-  </div>
-  <h3 class="font-semibold text-16 md:text-18 leading-2 mb-5 md:mb-10" data-movement="blend">Buttons size</h3>
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 w-full mb-5 md:mb-10">
-    <% for (var i = 6; i < 12; i++) { %>
-    <button class="btn btn-primary <%= buttons[i] %> btn-fill"><%= buttons[i] %></button>
-    <% } %>
-  </div>
-  <h3 class="font-semibold text-16 md:text-18 leading-2 mb-5 md:mb-10" data-movement="blend">Buttons effects</h3>
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 w-full mb-5 md:mb-10">
-    <% for (var i = 12; i < 14; i++) { %>
-    <button class="btn btn-primary btn-lg <%= buttons[i] %>"><%= buttons[i] %></button>
-    <% } %>
-  </div>
-  <h3 class="font-semibold text-16 md:text-18 leading-2 mb-5 md:mb-10" data-movement="blend">Buttons click</h3>
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 w-full mb-5 md:mb-10">
-    <% for (var i = 14; i < 17; i++) { %>
-    <button class="btn btn-primary btn-lg btn-fill" <%= buttons[i] %>><%= buttons[i] %></button>
-    <% } %>
-  </div>
-  <h3 class="font-semibold text-16 md:text-18 leading-2 mb-5 md:mb-10" data-movement="blend">Buttons click</h3>
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
-    <% for (var i = 17; i < buttons.length; i++) { %>
-    <button class="btn btn-primary btn-lg <%= buttons[i] %>"><%= buttons[i] %></button>
-    <% } %>
   </div>
 </section>
 
-<!-- Аккордеон -->
+<!-- Управление -->
 
-<% var accordion = [
+<% var control = [
   {
-    data: 'active',
-    number: '1',
-    items: '2'
+    order: 'order-1',
+    anim: 'anim--right',
+    bg: 'bg-primary',
+    title: 'Ценообразование',
+    text: 'Дифференцированное ценообразование, основанное на эластичности товарных категорий.'
   },
   {
-    data: 'hidden',
-    number: '2',
-    items: '4'
+    order: 'order-2',
+    anim: 'anim--left',
+    bg: 'bg-second',
+    title: 'Ассортимент',
+    text: 'Динамичная перестройка под потребности покупателя. Все расчеты основаны на цифрах продаж конкретной аптеки.'
   },
   {
-    data: 'hidden',
-    number: '3',
-    items: '3'
+    order: 'order-3 lg:order-4',
+    anim: 'anim--left',
+    bg: 'bg-primary',
+    title: 'Мотивация',
+    text: 'Активное управление продажами при полном контроле бюджета на ФОТ.'
   }
 ] %>
 
-<section class="documents container container--distance flex flex-col items-center justify-center bg-grey dark:bg-dark">
-  <h2 class="font-alt font-bold text-center text-36 lg:text-48 leading-2 mb-3" data-movement="blend">Accordion</h2>
-  <h3 class="font-semibold text-16 md:text-18 leading-2 mb-5 md:mb-10" data-movement="blend">Drop-down list</h3>
-  <div class="flex flex-col gap-5 w-full">
-    <% for (var i = 0; i < accordion.length; i++) { %>
-    <div class="documents__accordion relative bg-second bg-opacity-10 rounded-4 shadow-md overflow-hidden py-4 px-4 md:py-6" data-accordion="<%= accordion[i].data %>">
-      <div class="flex items-center justify-between gap-4">
-        <h4 class="font-alt font-semibold text-16 md:text-20">Documents - <%= accordion[i].number %></h4>
-        <button class="btn btn-primary btn-fill text-14 rounded-max w-[36px] h-[36px]" data-accordion-toggle data-waved="light">
-          <svg class="documents__arrow icon text-14 duration-3">
-            <use xlink:href="img/icons.svg#arrow-right">
-          </svg>
-        </button>
-      </div>
-      <div data-accordion-content>
-        <div class="flex flex-col gap-3 pt-4">
-          <% for (var j = 0; j < accordion[i].items; j++) { %>
-          <a class="flex items-center gap-4 relative hover:underline underline-offset-4 bg-white rounded-2 p-3 dark:bg-black" data-waved="dark" href="javascript: ;">
-            <div class="icon flex items-center justify-center bg-primary bg-opacity-10 text-primary text-48 rounded-2">
-              <svg class="icon text-24">
-                <use xlink:href="img/icons.svg#file">
-              </svg>
-            </div>
-            <p class="text-14 md:text-16">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-          </a>
-          <% } %>
+<section class="container relative overflow-hidden pb-0">
+  <div class="absolute inset-0" data-speed="1.1">
+    <img class="hidden lg:block absolute top-10 left-10 xl:top-[100px] xl:left-[100px] w-full max-w-[150px] xl:max-w-[230px]" src="img/pictures/pills.svg" alt="">
+    <img class="hidden lg:block absolute right-2 xl:right-8 bottom-5 xl:-rotate-[30deg] w-full max-w-[150px] xl:max-w-[220px]" src="img/pictures/syringe.svg" alt="">
+  </div>
+  <div class="relative">
+    <h2 class="font-semibold uppercase text-26 sm:text-30 md:text-36 leading-3 mb-7 lg:mb-14 duration-5 anim anim--right" data-anim="hidden">Как мы управляем аптеками</h2>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-10">
+      <div class="order-4 lg:order-3 duration-5 anim anim--right" data-anim="hidden">
+        <div class="relative lg:min-h-[220px]">
+          <img class="block lg:absolute lg:right-0 lg:bottom-0 w-full xl:min-w-[560px]" src="img/pictures/control-img.svg" alt="">
         </div>
       </div>
+      <% for (var i = 0; i < control.length; i++) { %>
+      <div class="<%= control[i].order %> duration-5 anim <%= control[i].anim %>" data-anim="hidden">
+        <div class="flex flex-col justify-center relative <%= control[i].bg %> text-white rounded-[26px_0px_26px_26px] min-h-[150px] lg:min-h-[220px] py-6 px-4 md:px-8 lg:py-10 lg:px-12">
+          <h4 class="font-semibold text-24 md:text-30 lg:text-36 leading-3 mb-2"><%= control[i].title %></h4>
+          <p class="font-normal text-16 leading-5"><%= control[i].text %></p>
+        </div>
+      </div>
+      <% } %>
     </div>
-    <% } %>
   </div>
 </section>
 
-<!-- Фильтер -->
+<!-- Описание -->
 
-<% var numbers = [
+<% var description = [
   {
-    text: 'text-36',
-    number: '36'
+    anim: 'lg:anim--right',
+    flex: 'lg:flex-row',
+    title: 'IT-инфраструктура',
+    listing: [
+      'Программный продукт «Смартаптека». Устанавливаем своими силами и за свой счет, перенося остатки со старой программы, полностью контролируя данный процесс.',
+      'Обслуживание компьютеров и периферийного оборудования. Видеокамеры, кассовые аппараты, мониторы, серверы и т.д.',
+      'Все работы по настройке, решению проблем на нашей стороне.'
+    ],
+    rounded: 'rounded-[0px_500px_500px_0px]',
+    margin: '-ml-10',
+    img: '1'
   },
   {
-    text: 'text-32',
-    number: '32'
+    anim: 'lg:anim--left',
+    flex: 'lg:flex-row-reverse',
+    title: 'Доступ к поставщикам и условиям по маркетингу',
+    listing: [
+      'Маркетинг <span class="font-semibold">7-8%</span> от закупки',
+      'Отсрочка платежа <span class="font-semibold">30-45</span> дней'
+    ],
+    rounded: 'rounded-[500px_0px_0px_500px]',
+    margin: '-mr-10',
+    img: '2'
   },
   {
-    text: 'text-28',
-    number: '28'
+    anim: 'lg:anim--right',
+    flex: 'lg:flex-row',
+    title: 'Взаимодействие с проверяющими органами',
+    listing: [
+      'Лицензирование.',
+      'Внутренние проверки, максимально возможное (разумное) соблюдение норм.',
+      'Подготовка аптек и участие в официальных проверках, взаимодействие с проверяющими органами.',
+      'Актуализация и ведение необходимой документации (СОПы, журналы и пр.).',
+      'Контроль медкнижек, санминимумов, своевременная актуализация.',
+      'Аккредитация, сертификация, обучение, набор баллов, ведение реестра специалистов.',
+      'Забраковка, сроки годности, карантинная зона.',
+      'Инвентаризации.'
+    ],
+    rounded: 'rounded-[0px_500px_500px_0px]',
+    margin: '-ml-10',
+    img: '3'
   },
   {
-    text: 'text-24',
-    number: '24'
+    anim: 'lg:anim--left',
+    flex: 'lg:flex-row-reverse',
+    title: 'Маркетинг и PR',
+    listing: [
+      'Проведение промо-акций, товара дня.',
+      'Бесплатное подключение к программе лояльности, в том числе смс-рассылки по базе.',
+      'Анализ конкурентов – потенциал, изменения в маркетинге и промо.',
+      'Анализ эффективности подключенияк интернет-агрегаторам, повышение доходности данного канала.',
+      'Работа с репутацией (размещение в Яндекс Картах, 2ГИС, работа с отзывами, публикация правильной информации, скидок и пр.).',
+      'Формирование «правильного» ценообразования, исходя из эластичности товаров.',
+      'Управление мотивацией линейного персонала, активное управление продажами.',
+      'Проведение внутренних акций.'
+    ],
+    rounded: 'rounded-[500px_0px_0px_500px]',
+    margin: '-mr-10',
+    img: '4'
   },
   {
-    text: 'text-20',
-    number: '20'
+    anim: 'lg:anim--right',
+    flex: 'lg:flex-row',
+    title: 'Бухгалтерия и юридическая поддержка',
+    listing: [
+      'Контроль и проведение своевременных оплат контрагентам.',
+      'Сверка с контрагентами.',
+      'Годовой баланс, квартальные отчеты.',
+      'Выплаты зарплаты, ведение больничных.',
+      'Контроль начислений отпускных.',
+      'Взаимоотношения с банками, расчетные счета, инкассация, эквайринг, размен – получение лучших условий, вся работа по данным направлениям.',
+      'Заключение договоров аренды.',
+      'Работа с госорганами.'
+    ],
+    rounded: 'rounded-[0px_500px_500px_0px]',
+    margin: '-ml-10',
+    img: '5'
   },
   {
-    text: 'text-16',
-    number: '16'
+    anim: 'lg:anim--left',
+    flex: 'lg:flex-row-reverse',
+    title: 'Кадры',
+    listing: [
+      'Ведение всей документации (трудовые книжки, приказы, трудовые договора, и т.д.).',
+      'Работа с военкоматами, Социальным фондом, Росстатом, службой занятости.',
+      'Проведение спецоценки труда рабочих мест (мы организуем, оплачивается клиентом).',
+      'Трудовые споры.',
+      'Поиск персонала – полноценных кадров, подработчиков, закрытие смен. Вакансии на сайтах рекрутмента, обзвон, сбор потенциальной базы работников.',
+      'Разделение оплаты кластерных заведующих (одна заведующая на 3-5 аптек с разделением зарплаты по количеству ведомых аптек).',
+      'Оценка и развитие персонала (обучение бизнес-тренером и пр.).',
+      'Оценка и улучшение атмосферы в коллективе, проведение неформальных мероприятий.'
+    ],
+    rounded: 'rounded-[500px_0px_0px_500px]',
+    margin: '-mr-10',
+    img: '6'
   },
   {
-    text: 'text-12',
-    number: '12'
+    anim: 'lg:anim--right',
+    flex: 'lg:flex-row',
+    title: 'Закупки',
+    listing: [
+      'Взаимоотношения с поставщиками – получение лучших условий, договорная работа.',
+      'Предупреждение появления дефицитов, получение дефицитных товаров.',
+      'Управление глубиной заказа, достижение минимального количества отказов при оптимальной оборачиваемости товарных остатков.',
+      'Работа с возвратами, пересортами, недовозами.',
+      'Обработка интернет-заказов.',
+      'Формирование ассортиментной матрицы, пересмотр по продажам каждые 4 месяца, работа с отказами на кассах.'
+    ],
+    rounded: 'rounded-[0px_500px_500px_0px]',
+    margin: '-ml-10',
+    img: '7'
+  },
+  {
+    anim: 'lg:anim--left',
+    flex: 'lg:flex-row-reverse',
+    title: 'Внутренние коммуникации и развитие',
+    listing: [
+      'Видеонаблюдение, введение и соблюдение стандартов поведения первостольников, работа с повышением качества обслуживания.',
+      'Оценка первостольников по грейдам (относительно внутреннего участия в делах компании и соответствие заявленным высоким требованиям).',
+      'Развитие кластерных руководителей, помощь в работе.'
+    ],
+    rounded: 'rounded-[500px_0px_0px_500px]',
+    margin: '-mr-10',
+    img: '8'
+  },
+  {
+    anim: 'lg:anim--right',
+    flex: 'lg:flex-row',
+    title: 'Хозяйственный блок',
+    listing: [
+      'Проводим все плановые мелкие работы (замена лампочек, ремонт дверей, полок и пр.).',
+      'Регулярно развозим документыи предметы хозяйственных нужд (канцелярия, кассовые ленты, пакеты, бумага, обмен картриджей для принтеров и пр.).',
+      'Экстренные ситуации решаются через вызов внешних специалистов за счет клиента (прорвало трубу и т.п.).'
+    ],
+    rounded: 'rounded-[0px_500px_500px_0px]',
+    margin: '-ml-10',
+    img: '9'
   }
 ] %>
 
-<section class="filtering container flex flex-col items-center bg-white text-white bg-no-repeat bg-center bg-cover overflow-hidden min-h-screen dark:bg-black" data-section data-bg="img/pictures/town-grey.jpg" data-bg-webp="img/pictures/town-grey.webp">
-  <h2 class="font-alt font-bold text-center text-36 lg:text-48 leading-2 mb-3" data-movement="blend">Filter</h2>
-  <h3 class="font-semibold text-16 md:text-18 leading-2 mb-5 md:mb-10" data-movement="blend">paralax, form and other...</h3>
-  <div class="relative max-w-xl w-full mx-auto" data-filter>
-    <picture>
-      <img class="filtering__circle filtering__circle--grey icon absolute z-1 top-20 -left-8 text-6xl drop-shadow-md pointer-events-none ease-linear duration-2" data-parallax="layer" src="img/pictures/circle-grey.png" alt="">
-    </picture>
-    <picture>
-      <img class="filtering__circle filtering__circle--white icon absolute z-1 -bottom-8 -right-8 text-6xl drop-shadow-md pointer-events-none ease-linear duration-2" data-parallax="layer" src="img/pictures/circle-white.png" alt="">
-    </picture>
-    <picture>
-      <img class="icon absolute z-1 -bottom-80 -right-7 text-6xl drop-shadow-md pointer-events-none ease-linear duration-1" data-parallax="scroll" data-parallax-depth="1.5" data-reverse src="img/pictures/circle-red.png" alt="">
-    </picture>
-    <div class="flex flex-col md:flex-row items-center justify-between gap-0 md:gap-4 relative bg-grey md:bg-opacity-0 text-second md:text-white rounded-4 md:rounded-none md:border-b md:border-solid md:border-white overflow-hidden mb-5 md:mb-10 md:pb-4">
-      <div class="filtering__category filter-active flex-grow text-center text-20 cursor-pointer w-full p-4 md:p-0" data-filter-category="category-1">Text-style</div>
-      <div class="filtering__category flex-grow text-center text-20 cursor-pointer w-full p-4 md:p-0" data-filter-category="category-2">Form-validate</div>
-      <div class="filtering__category flex-grow text-center text-20 cursor-pointer w-full p-4 md:p-0" data-filter-category="category-3">Switches</div>
-      <div class="filtering__category flex-grow text-center text-20 cursor-pointer w-full p-4 md:p-0" data-filter-category="category-4">File</div>
-      <span class="hidden md:block absolute left-0 bottom-0 bg-primary rounded-t-2 h-1 ease-linear duration-3" data-filter-line></span>
-    </div>
-    <div class="bg-white text-black rounded-6 shadow-md p-7 md:p-10">
-      <div class="filtering__card" data-filter-card="category-1">
-        <ul class="flex flex-col gap-4 list-disc list-inside text-primary">
-          <% for (var i = 0; i < numbers.length; i++) { %>
-          <li>
-            <span class="text-second <%= numbers[i].text %>">
-              --text-<span data-number="<%= numbers[i].number %>" data-number-step="1" data-number-time="2" data-number-fixed="0">0</span>
-            </span>
-          </li>
-          <% } %>
-        </ul>
-        <p class="text-primary mt-5">
-          <q class="bg-grey font-semibold text-justify text-18 box-decoration-clone leading-9 shadow-md rounded-4 py-1 px-3" data-record="Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ex omnis, ut dolorem dolore enim expedita?" data-record-speed="50"></q>
-        </p>
-      </div>
-      <div class="filtering__card hidden" data-filter-card="category-2">
-        <form class="form max-w-[400px] w-full mx-auto" data-form="submit" data-files data-datepicker id="form-data">
-          <input type="hidden" value="Главная" name="theme">
-          <label class="form-label mb-5" data-label="input">
-            <span class="text-20 mb-3">Name</span>
-            <div class="form-wrapper">
-              <div class="input-cover">
-                <input class="input input-gray input-lg" data-input="name" type="text" placeholder="Name" name="name">
-              </div>
-              <span class="form-error" data-error>Пожалуйста, введите ваше имя!</span>
-            </div>
-          </label>
-          <label class="form-label mb-5" data-label="input">
-            <span class="text-20 mb-3">Telephone</span>
-            <div class="form-wrapper">
-              <div class="input-cover">
-                <input class="input input-gray input-lg" data-input="tel" type="tel" placeholder="+7 (" name="tel">
-              </div>
-              <span class="form-error" data-error>Пожалуйста, введите ваш номер!</span>
-            </div>
-          </label>
-          <label class="form-label mb-5" data-label="input">
-            <span class="text-20 mb-3">Email</span>
-            <div class="form-wrapper">
-              <div class="input-cover">
-                <input class="input input-gray input-lg" data-input="email" type="text" placeholder="_@_._" name="email">
-              </div>
-              <span class="form-error" data-error>Пожалуйста, введите корректный адрес!</span>
-            </div>
-          </label>
-          <label class="form-label mb-5" data-label="input">
-            <span class="text-20 mb-3">Date</span>
-            <div class="form-wrapper">
-              <div class="input-cover">
-                <input class="input input-gray input-lg" data-input="min" data-position="top left" type="text" name="check-in">
-                <input class="input input-gray input-lg" data-input="max" type="text" name="check-out">
-              </div>
-              <div class="form-icon form-icon--right text-20">
-                <svg class="icon">
-                  <use xlink:href="img/icons.svg#calendar">
-                </svg>
-              </div>
-              <span class="form-error" data-error>Пожалуйста, укажите дату!</span>
-            </div>
-          </label>
-          <label class="form-label mb-5" data-label="input">
-            <span class="text-20 mb-3">Number</span>
-            <div class="form-wrapper">
-              <div class="input-cover">
-                <input class="input input-gray input-lg" data-input="number" type="text" placeholder="12345" name="number">
-              </div>
-              <span class="form-error" data-error>Пожалуйста, введите число!</span>
-            </div>
-          </label>
-          <label class="form-label mb-5" data-label="input">
-            <span class="text-20 mb-3">Select</span>
-            <div class="form-wrapper">
-              <div class="input-cover">
-                <select class="input input-gray input-lg" data-input="select" name="select">
-                  <option value="0" disabled hidden selected>Select</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                </select>
-              </div>
-              <div class="form-icon form-icon--right text-12">
-                <svg class="icon">
-                  <use xlink:href="img/icons.svg#arrow-bottom">
-                </svg>
-              </div>
-              <span class="form-error" data-error>Пожалуйста, выберите вариант!</span>
-            </div>
-          </label>
-          <label class="form-label mb-5" data-label="input">
-            <span class="text-20 mb-3">Reviews</span>
-            <div class="form-wrapper">
-              <div class="input-cover">
-                <textarea class="input input-gray input-lg h-[200px]" data-input="text" type="text" placeholder="Reviews" name="text"></textarea>
-              </div>
-              <span class="form-error" data-error>Пожалуйста, оставьте отзыв!</span>
-            </div>
-          </label>
-          <div class="form-wrapper mb-5" data-label="download">
-            <label class="btn btn-second btn-lg btn-fade" data-waved="dark">
-              <input class="hidden" data-input="file" type="file">
-              <span data-files-text>Загрузить файлы</span>
-            </label>
-            <span class="form-error" data-error>Пожалуйста, загрузите изображение!</span>
-          </div>
-          <ul class="flex flex-col gap-1 text-12" data-files-listing></ul>
-          <button class="btn btn-second btn-lg btn-fill mb-5" data-waved="dark" type="submit">Submit</button>
-          <div class="hover:underline underline-offset-4 cursor-pointer text-second text-18 w-max mx-auto" data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-politics.html">Privacy policy</div>
-        </form>
-      </div>
-      <div class="filtering__card hidden" data-filter-card="category-3">
-        <div class="flex flex-col gap-6">
-          <h4 class="font-semibold text-24">Checkbox:</h4>
-          <div class="flex items-center gap-5">
-            <input class="switch switch--checkbox" type="checkbox">
-            <input class="switch switch--checkbox text-second" type="checkbox">
-            <input class="switch switch--checkbox" type="checkbox" disabled>
-          </div>
-          <h4 class="font-semibold text-24">Radio:</h4>
-          <div class="flex items-center gap-5">
-            <input class="switch switch--radio" type="radio" name="radio">
-            <input class="switch switch--radio text-second" type="radio" name="radio">
-            <input class="switch switch--radio" type="radio" name="radio" disabled>
-          </div>
-          <h4 class="font-semibold text-24">Toggle:</h4>
-          <input class="switch switch--toggle" type="checkbox">
-          <h4 class="font-semibold text-24">Quantity:</h4>
-          <div class="quantity" data-quantity>
-            <button class="quantity-btn btn btn-gray btn-fill" data-quantity-decrease data-waved="light">-</button>
-            <div class="quantity-cover input-cover">
-              <input class="quantity-input input" data-input="number" type="text" value="1" maxlength="3" name="quantity">
-            </div>
-            <button class="quantity-btn btn btn-gray btn-fill" data-quantity-increase data-waved="light">+</button>
-          </div>
-          <h4 class="font-semibold text-24">Rating:</h4>
-          <div class="rating bg-gray bg-opacity-40 rounded-10 p-3">
-            <% for (var i = 5; i > 0; i--) { %>
-            <input class="rating-input hidden" id="rating-<%= i %>" type="radio" value="<%= i %>" name="rating">
-            <label class="rating-star" for="rating-<%= i %>">
-              <svg class="icon">
-                <use xlink:href="img/icons.svg#star">
-              </svg>
-            </label>
-            <% } %>
-          </div>
-          <h4 class="font-semibold text-24">Range:</h4>
-          <div class="range w- max-w-[350px]" data-range>
-            <div class="flex items-center justify-between mb-4">
-              <span class="text-16">Value</span>
-              <output class="text-16 opacity-60" data-range-output></output>
-            </div>
-            <div class="relative text-white pointer-events-none">
-              <div class="range-wrapper" data-range-wrapper>
-                <input class="range-input bg-gray" data-range-input type="range" step="1" max="10" value="5">
-                <div class="range-progress bg-primary" data-range-progress></div>
-                <output class="range-bubble bg-primary" data-range-bubble></output>
-              </div>
-            </div>
-          </div>
-          <div class="range w-full max-w-[350px]" data-range>
-            <div class="flex items-center justify-between mb-4">
-              <div class="range-cover input-cover">
-                <input class="input input-gray input-lg text-center" data-range-output data-input="number" type="text" maxlength="3">
-              </div>
-              <div class="range-cover input-cover">
-                <input class="input input-gray input-lg text-center" data-range-output data-input="number" type="text" maxlength="3">
-              </div>
-            </div>
-            <div class="relative text-white pointer-events-none">
-              <div class="range-wrapper" data-range-wrapper>
-                <input class="range-input bg-primary" data-range-input type="range" step="1" max="100" value="30">
-                <div class="range-progress bg-gray" data-range-progress></div>
-                <output class="range-bubble bg-primary" data-range-bubble></output>
-              </div>
-              <div class="range-wrapper" data-range-wrapper>
-                <input class="range-input bg-primary" data-range-input type="range" step="1" max="100" value="70">
-                <div class="range-progress bg-gray" data-range-progress></div>
-                <output class="range-bubble bg-primary" data-range-bubble></output>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="filtering__card hidden" data-filter-card="category-4">
-        <div class="max-w-xs mx-auto" id="copy">
-          <div class="flex items-center gap-3 w-full mb-5">
-            <div class="pack pack-box bg-primary bg-opacity-40 rounded-max cursor-pointer max-w-[40px] w-full" data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-avatar.html">
-              <div class="flex items-center justify-center absolute inset-0">
-                <svg class="icon text-white text-14">
-                  <use xlink:href="img/icons.svg#user">
-                </svg>
-              </div>
-              <picture>
-                <img class="image" data-avatar src="" alt="">
-              </picture>
-            </div>
-            <h4 class="text-24 font-bold">Name Surname</h4>
-          </div>
-          <form class="form mb-5" data-form="submit">
-            <input type="hidden" value="Изображение" name="theme">
-            <div class="form-label items-center justify-center" data-label="download">
-              <div class="form-wrapper mb-5">
-                <div class="pack pack-box bg-second rounded-4 w-full duration-2" data-drag>
-                  <picture>
-                    <img class="image image-scale-down" data-file="image" src="img/pictures/geo.png" alt="">
-                  </picture>
+<section class="description container relative overflow-hidden">
+  <div class="absolute inset-0" data-speed="1.1"></div>
+  <div class="relative">
+    <div class="description-slider">
+      <div class="swiper overflow-visible">
+        <div class="description-wrapper swiper-wrapper lg:flex-col lg:gap-20">
+          <% for (var i = 0; i < description.length; i++) { %>
+          <div class="swiper-slide">
+            <div class="duration-5 anim <%= description[i].anim %>" data-anim="hidden">
+              <div class="flex flex-col <%= description[i].flex %> lg:items-stretch lg:justify-between">
+                <div class="card z-1 rounded-4 lg:rounded-7 w-full lg:max-w-[540px]" data-waved="dark">
+                  <div class="bg-primary text-white rounded-4 lg:rounded-7 py-4 px-3 lg:py-5 lg:px-6">
+                    <h4 class="font-bold text-24 lg:text-30 leading-2"><%= description[i].title %></h4>
+                  </div>
+                  <div class="card-content pt-5 pb-7 px-3 lg:pb-10 lg:px-8">
+                    <div class="flex flex-col gap-3">
+                      <% for (var j = 0; j < description[i].listing.length; j++) { %>
+                      <div class="flex">
+                        <span class="icon bg-second rounded-max text-10 mt-2 mr-2 lg:mr-3"></span>
+                        <p class="font-normal text-16 leading-5"><%= description[i].listing[j] %></p>
+                      </div>
+                      <% } %>
+                    </div>
+                  </div>
                 </div>
-                <span class="form-error" data-error>Пожалуйста, загрузите изображение!</span>
-              </div>
-              <div class="flex flex-wrap items-center justify-center gap-4 w-full">
-                <label class="btn btn-primary btn-lg btn-fill w-full sm:w-auto" data-waved="light">
-                  <input class="hidden" data-input="file" type="file" name="file[]">
-                  Загрузить
-                </label>
-                <button class="btn btn-primary btn-lg btn-contur w-full sm:w-auto" data-waved="dark" type="submit">Отправить</button>
+                <div class="card hidden lg:flex <%= description[i].rounded %> border-[6px] border-solid border-white w-full max-w-[600px] <%= description[i].margin %>">
+                  <div class="pack bg-grey h-full" data-movement="light">
+                    <div class="loader">
+                      <span class="loader-progress">
+                        <svg class="loader-icon icon">
+                          <use xlink:href="img/icons.svg#loader">
+                        </svg>
+                      </span>
+                    </div>
+                    <picture>
+                      <source srcset="img/pictures/description-img-<%= description[i].img %>.webp" type="image/webp">
+                      <img class="image image-rise" loading="lazy" src="img/pictures/description-img-<%= description[i].img %>.jpg" alt="">
+                    </picture>
+                  </div>
+                </div>
               </div>
             </div>
-          </form>
-          <div class="flex flex-wrap items-center justify-center gap-4 w-full">
-            <div class="input-cover relative w-full sm:w-max" data-copy>
-              <input class="input input-gray input-lg absolute inset-0 opacity-0" data-copy-input type="text" value="http://localhost:9000/index.html#copy">
-              <button class="btn btn-gray btn-lg btn-fill w-full px-10" data-copy-button data-waved="dark">Copy</button>
-            </div>
-            <button class="btn btn-gray btn-lg btn-fill w-full sm:w-auto px-10" data-waved="dark" data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-calendar.html">Calendar</button>
           </div>
+          <% } %>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<%= _.template(require('./includes/player.html').default)() %>
 
 <%= require('./includes/footer.html').default %>

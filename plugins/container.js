@@ -19,26 +19,16 @@ module.exports = plugin(({ addComponents, theme }) => {
       },
 
       [`@media (min-width: ${theme('screens.md')})`]: {
-        '--padding-block': '60px',
         '--padding-inline': 'var(--md)',
       },
 
       [`@media (min-width: ${theme('screens.lg')})`]: {
-        '--padding-block': '70px',
+        '--padding-block': '60px',
         '--padding-inline': 'var(--lg)',
       },
 
       [`@media (min-width: ${theme('screens.xl')})`]: {
-        '--padding-block': '80px',
         '--padding-inline': 'var(--xl)',
-
-        '&--distance': {
-          '--width': 'var(--xl)',
-          '--distance': '20px',
-          '--padding-inline': 'calc(var(--width) + (var(--distance) * 2))',
-          margin: 'var(--distance)',
-          borderRadius: 'var(--distance)',
-        },
       },
     },
   })

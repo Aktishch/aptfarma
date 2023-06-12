@@ -25,13 +25,13 @@ module.exports = {
 
     colors: {
       primary: {
-        DEFAULT: '#af1a4c',
-        dark: '#831339',
+        DEFAULT: '#00A6DA',
+        dark: '#007fa7',
       },
 
       second: {
-        DEFAULT: '#d7a751',
-        dark: '#c7902e',
+        DEFAULT: '#D92819',
+        dark: '#ab2014',
       },
 
       black: {
@@ -43,29 +43,15 @@ module.exports = {
       },
 
       gray: {
-        DEFAULT: '#b2b2b2',
-        dark: '#999',
+        DEFAULT: '#DCDCDC',
       },
 
       grey: {
-        DEFAULT: '#f6f7f9',
-      },
-
-      dark: {
-        DEFAULT: '#303030',
-      },
-
-      red: {
-        DEFAULT: '#be1b1b',
-      },
-
-      green: {
-        DEFAULT: '#27ae60',
+        DEFAULT: '#F0F3F5',
       },
     },
 
     fontFamily: {
-      alt: 'var(--font-alt)',
       base: 'var(--font-base)',
     },
 
@@ -198,12 +184,12 @@ module.exports = {
     },
 
     size: {
-      xs: '28px',
-      sm: '36px',
-      md: '40px',
-      lg: '45px',
-      xl: '56px',
-      xxl: '64px',
+      xs: '30px',
+      sm: '45px',
+      md: '56px',
+      lg: '77px',
+      xl: '84px',
+      xxl: '92px',
     },
   },
 
@@ -216,7 +202,7 @@ module.exports = {
     require('./plugins/form'),
     require('./plugins/input'),
     require('./plugins/button'),
-    require('./plugins/switch'),
-    // require('./plugins/animation')
+    // require('./plugins/switch'),
+    require('./plugins/animation'),
   ],
 }

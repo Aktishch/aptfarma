@@ -97,7 +97,7 @@ module.exports = plugin(({ addComponents, matchComponents, theme }) => {
       },
 
       '&-contur': {
-        border: '2px solid var(--btn-color)',
+        border: '1px solid var(--btn-color)',
       },
     },
   })
@@ -127,7 +127,7 @@ module.exports = plugin(({ addComponents, matchComponents, theme }) => {
     {
       btn: (size) => {
         return {
-          borderRadius: '6px',
+          borderRadius: '150px',
           height: size,
           paddingInline: `calc(${size} / 2)`,
         }
