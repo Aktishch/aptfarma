@@ -183,9 +183,9 @@
     text: 'Работаем без изменений в уставных документах.'
   },
   {
-    hidden: 'hidden sm:block',
+    hidden: '',
     delay: '',
-    data: 'data-listing-item',
+    data: '',
     title: 'Делаем частью известного бренда',
     icon: 'img/icons.svg#planet',
     text: 'Только в сети Интернет наши аптеки ищут более 100 000 человек в месяц.'
@@ -221,7 +221,7 @@
     <img class="hidden lg:block absolute -left-[50px] bottom-[200px] w-full max-w-[200px] xl:max-w-[360px]" src="img/pictures/thermometer.svg" alt="">
     <img class="hidden lg:block absolute -right-[64px] bottom-[120px] w-full max-w-[200px] xl:max-w-[320px]" src="img/pictures/patch.svg" alt="">
   </div>
-  <div class="relative" data-listing="2">
+  <div class="relative" data-listing>
     <h2 class="font-semibold uppercase text-26 sm:text-30 md:text-36 leading-3 mb-7 lg:mb-14 duration-5 anim anim--right" data-anim="hidden">ПРОЗРАЧНЫЕ И ВЫГОДНЫЕ УСЛОВИЯ</h2>
     <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-7">
       <div class="xl:col-2 grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-7">
@@ -318,7 +318,9 @@
 
 <% var description = [
   {
+    hidden: '',
     anim: 'lg:anim--right',
+    data: '',
     flex: 'lg:flex-row',
     title: 'IT-инфраструктура',
     listing: [
@@ -331,7 +333,9 @@
     img: '1'
   },
   {
+    hidden: '',
     anim: 'lg:anim--left',
+    data: '',
     flex: 'lg:flex-row-reverse',
     title: 'Доступ к поставщикам и условиям по маркетингу',
     listing: [
@@ -343,7 +347,9 @@
     img: '2'
   },
   {
+    hidden: '',
     anim: 'lg:anim--right',
+    data: '',
     flex: 'lg:flex-row',
     title: 'Взаимодействие с проверяющими органами',
     listing: [
@@ -361,7 +367,9 @@
     img: '3'
   },
   {
+    hidden: 'hidden lg:block',
     anim: 'lg:anim--left',
+    data: 'data-listing-item',
     flex: 'lg:flex-row-reverse',
     title: 'Маркетинг и PR',
     listing: [
@@ -379,7 +387,9 @@
     img: '4'
   },
   {
+    hidden: 'hidden lg:block',
     anim: 'lg:anim--right',
+    data: 'data-listing-item',
     flex: 'lg:flex-row',
     title: 'Бухгалтерия и юридическая поддержка',
     listing: [
@@ -397,7 +407,9 @@
     img: '5'
   },
   {
+    hidden: 'hidden lg:block',
     anim: 'lg:anim--left',
+    data: 'data-listing-item',
     flex: 'lg:flex-row-reverse',
     title: 'Кадры',
     listing: [
@@ -415,7 +427,9 @@
     img: '6'
   },
   {
+    hidden: 'hidden lg:block',
     anim: 'lg:anim--right',
+    data: 'data-listing-item',
     flex: 'lg:flex-row',
     title: 'Закупки',
     listing: [
@@ -431,7 +445,9 @@
     img: '7'
   },
   {
+    hidden: 'hidden lg:block',
     anim: 'lg:anim--left',
+    data: 'data-listing-item',
     flex: 'lg:flex-row-reverse',
     title: 'Внутренние коммуникации и развитие',
     listing: [
@@ -444,7 +460,9 @@
     img: '8'
   },
   {
+    hidden: 'hidden lg:block',
     anim: 'lg:anim--right',
+    data: 'data-listing-item',
     flex: 'lg:flex-row',
     title: 'Хозяйственный блок',
     listing: [
@@ -458,52 +476,68 @@
   }
 ] %>
 
-<section class="description container relative overflow-hidden">
-  <div class="absolute inset-0" data-speed="1.1"></div>
+<section class="container relative overflow-hidden" data-listing="3">
+  <div class="absolute inset-0" data-speed="1.1">
+    <img class="hidden xl:block absolute -left-12 top-0 w-full max-w-[300px]" src="img/pictures/patch-big.svg" alt="">
+    <img class="hidden xl:block absolute right-4 top-0 w-full max-w-[300px]" src="img/pictures/pill-open.svg" alt="">
+    <img class="hidden xl:block absolute -left-4 top-[400px] w-full max-w-[300px]" src="img/pictures/tablet.svg" alt="">
+    <img class="hidden xl:block absolute right-[120px] top-[400px] w-full max-w-[150px]" src="img/pictures/jar.svg" alt="">
+    <img class="hidden xl:block absolute left-14 top-[900px] w-full max-w-[200px]" src="img/pictures/pack.svg" alt="">
+    <img class="hidden xl:block absolute -right-16 top-[800px] w-full max-w-[300px]" src="img/pictures/pills.svg" alt="">
+    <img class="hidden xl:block absolute -left-10 top-[1600px] w-full max-w-[250px]" src="img/pictures/pill-big.svg" alt="">
+    <img class="hidden xl:block absolute -right-20 top-[1600px] w-full max-w-[350px]" src="img/pictures/pills-pack.svg" alt="">
+    <img class="hidden xl:block absolute -left-16 top-[2300px] rotate-[95deg] w-full max-w-[300px]" src="img/pictures/tube.svg" alt="">
+    <img class="hidden xl:block absolute -right-28 top-[2500px] w-full max-w-[300px]" src="img/pictures/patch-big.svg" alt="">
+    <img class="hidden xl:block absolute left-[140px] top-[2800px] w-full max-w-[300px]" src="img/pictures/pack-min.svg" alt="">
+    <img class="hidden xl:block absolute -right-20 top-[3100px] w-full max-w-[350px]" src="img/pictures/pack-height.svg" alt="">
+    <img class="hidden xl:block absolute -left-10 top-[3800px] w-full max-w-[250px]" src="img/pictures/pills-two.svg" alt="">
+    <img class="hidden xl:block absolute -right-10 top-[3800px] -rotate-180 w-full max-w-[300px]" src="img/pictures/thermometer.svg" alt="">
+    <img class="hidden xl:block absolute left-0 top-[4300px] -rotate-[200deg] w-full max-w-[150px]" src="img/pictures/syringe.svg" alt="">
+    <img class="hidden xl:block absolute -right-[90px] top-[4300px] rotate-[150deg] w-full max-w-[300px]" src="img/pictures/patch.svg" alt="">
+    <img class="hidden xl:block absolute -left-16 -bottom-28 w-full -rotate-45 max-w-[450px]" src="img/pictures/pill-open.svg" alt="">
+    <img class="hidden xl:block absolute -right-20 -bottom-28 w-full max-w-[450px]" src="img/pictures/pills-big-two.svg" alt="">
+  </div>
   <div class="relative">
-    <div class="description-slider">
-      <div class="swiper overflow-visible">
-        <div class="description-wrapper swiper-wrapper lg:flex-col lg:gap-20">
-          <% for (var i = 0; i < description.length; i++) { %>
-          <div class="swiper-slide">
-            <div class="duration-5 anim <%= description[i].anim %>" data-anim="hidden">
-              <div class="flex flex-col <%= description[i].flex %> lg:items-stretch lg:justify-between">
-                <div class="card z-1 rounded-4 lg:rounded-7 w-full lg:max-w-[540px]" data-waved="dark">
-                  <div class="bg-primary text-white rounded-4 lg:rounded-7 py-4 px-3 lg:py-5 lg:px-6">
-                    <h4 class="font-bold text-24 lg:text-30 leading-2"><%= description[i].title %></h4>
-                  </div>
-                  <div class="card-content pt-5 pb-7 px-3 lg:pb-10 lg:px-8">
-                    <div class="flex flex-col gap-3">
-                      <% for (var j = 0; j < description[i].listing.length; j++) { %>
-                      <div class="flex">
-                        <span class="icon bg-second rounded-max text-10 mt-2 mr-2 lg:mr-3"></span>
-                        <p class="font-normal text-16 leading-5"><%= description[i].listing[j] %></p>
-                      </div>
-                      <% } %>
-                    </div>
-                  </div>
+    <div class="flex flex-col gap-6 sm:gap-10 lg:gap-20">
+      <% for (var i = 0; i < description.length; i++) { %>
+      <div class="<%= description[i].hidden %> duration-5 anim <%= description[i].anim %>" <%= description[i].data %> data-anim="hidden">
+        <div class="flex flex-col <%= description[i].flex %> lg:items-stretch lg:justify-between">
+          <div class="card z-1 rounded-4 lg:rounded-7 w-full lg:max-w-[540px]" data-waved="dark">
+            <div class="bg-primary text-white rounded-4 lg:rounded-7 py-4 px-3 lg:py-5 lg:px-6">
+              <h4 class="font-bold text-20 sm:text-24 lg:text-30 leading-2"><%= description[i].title %></h4>
+            </div>
+            <div class="card-content pt-5 pb-7 px-3 lg:pb-10 lg:px-8">
+              <div class="flex flex-col gap-3">
+                <% for (var j = 0; j < description[i].listing.length; j++) { %>
+                <div class="flex">
+                  <span class="icon bg-second rounded-max text-10 mt-1 mr-2 lg:mr-3"></span>
+                  <p class="font-normal text-14 sm:text-16 leading-5"><%= description[i].listing[j] %></p>
                 </div>
-                <div class="card hidden lg:flex <%= description[i].rounded %> border-[6px] border-solid border-white w-full max-w-[600px] <%= description[i].margin %>">
-                  <div class="pack bg-grey h-full" data-movement="light">
-                    <div class="loader">
-                      <span class="loader-progress">
-                        <svg class="loader-icon icon">
-                          <use xlink:href="img/icons.svg#loader">
-                        </svg>
-                      </span>
-                    </div>
-                    <picture>
-                      <source srcset="img/pictures/description-img-<%= description[i].img %>.webp" type="image/webp">
-                      <img class="image image-rise" loading="lazy" src="img/pictures/description-img-<%= description[i].img %>.jpg" alt="">
-                    </picture>
-                  </div>
-                </div>
+                <% } %>
               </div>
             </div>
           </div>
-          <% } %>
+          <div class="card hidden lg:flex <%= description[i].rounded %> border-[6px] border-solid border-white w-full max-w-[600px] <%= description[i].margin %>">
+            <div class="pack bg-grey h-full" data-movement="light">
+              <div class="loader">
+                <span class="loader-progress">
+                  <svg class="loader-icon icon">
+                    <use xlink:href="img/icons.svg#loader">
+                  </svg>
+                </span>
+              </div>
+              <picture>
+                <source srcset="img/pictures/description-img-<%= description[i].img %>.webp" type="image/webp">
+                <img class="image image-rise" loading="lazy" src="img/pictures/description-img-<%= description[i].img %>.jpg" alt="">
+              </picture>
+            </div>
+          </div>
         </div>
       </div>
+      <% } %>
+    </div>
+    <div class="lg:hidden duration-5 anim anim--up" data-anim="hidden">
+      <button class="btn btn-second btn-md btn-fill mx-auto mt-10" data-listing-show>Показать ещё</button>
     </div>
   </div>
 </section>

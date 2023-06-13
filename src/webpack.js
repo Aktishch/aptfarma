@@ -1,6 +1,6 @@
 // Libraries
 // import fancybox from './lib/fancybox'
-import sliderSwiper from './lib/slider-swiper'
+// import sliderSwiper from './lib/slider-swiper'
 // import yandexMap from './lib/yandex-map'
 // import airDatepicker from './lib/air-datepicker'
 import gsap from './lib/gsap'
@@ -55,7 +55,7 @@ import './scss/index.scss'
 // Connection
 window.addEventListener('DOMContentLoaded', () => {
   // fancybox.init()
-  sliderSwiper.init()
+  // sliderSwiper.init()
   // airDatepicker.init()
   // currentTab.init()
   // // scrollHeader.init()
