@@ -3,8 +3,6 @@
 module.exports = {
   content: ['./src/**/*.html', './src/ts/**/*.ts', './src/lib/**/*.js'],
 
-  darkMode: 'class',
-
   corePlugins: {
     container: false,
   },

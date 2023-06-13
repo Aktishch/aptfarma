@@ -43,8 +43,7 @@ module.exports = plugin(({ addComponents, theme }) => {
 
       '&-error': {
         fontSize: theme('fontSize.12'),
-        color: theme('colors.white.DEFAULT'),
-        backgroundColor: theme('colors.primary.DEFAULT'),
+        color: theme('colors.second.DEFAULT'),
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -52,11 +51,9 @@ module.exports = plugin(({ addComponents, theme }) => {
         position: 'absolute',
         left: 0,
         right: 0,
-        bottom: '-16px',
-        height: '16px',
+        bottom: '-18px',
         opacity: 0,
         visibility: 'hidden',
-        borderRadius: '4px',
         transition: '0.3s ease',
       },
     },

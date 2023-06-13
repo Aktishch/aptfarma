@@ -1,5 +1,5 @@
 // Libraries
-// import fancybox from './lib/fancybox'
+import fancybox from './lib/fancybox'
 // import sliderSwiper from './lib/slider-swiper'
 // import yandexMap from './lib/yandex-map'
 // import airDatepicker from './lib/air-datepicker'
@@ -7,7 +7,7 @@ import gsap from './lib/gsap'
 
 // Scripts
 // import scrollHeader from './ts/scroll-header'
-// import currentTab from './ts/current-tab'
+import currentTab from './ts/current-tab'
 // import mobileMenu from './ts/mobile-menu'
 // import progressLine from './ts/progress-line'
 // import scrollTo from './ts/scroll-to'
@@ -28,13 +28,13 @@ import listing from './ts/listing'
 // import outNumber from './ts/out-number'
 // import writeText from './ts/write-text'
 // import downloadFiles from './ts/download-files'
-// import formSubmit from './ts/form-submit'
+import formSubmit from './ts/form-submit'
 // import formSave from './ts/form-save'
 // import dragAndDrop from './ts/drag-and-drop'
 // import choiceFile from './ts/choice-file'
 // import copyLink from './ts/copy-link'
-// import formInputs from './ts/form-inputs'
-// import maskTel from './ts/mask-tel'
+import formInputs from './ts/form-inputs'
+import maskTel from './ts/mask-tel'
 // import password from './ts/password'
 // import quantity from './ts/quantity'
 // import range from './ts/range'
@@ -54,10 +54,10 @@ import './scss/index.scss'
 
 // Connection
 window.addEventListener('DOMContentLoaded', () => {
-  // fancybox.init()
+  fancybox.init()
   // sliderSwiper.init()
   // airDatepicker.init()
-  // currentTab.init()
+  currentTab.init()
   // // scrollHeader.init()
   // mobileMenu.init()
   // progressLine.init()
@@ -78,13 +78,13 @@ window.addEventListener('DOMContentLoaded', () => {
   // filter.init()
   // outNumber.init()
   // writeText.init()
-  // formSubmit.init(downloadFiles.init())
+  formSubmit.init()
   // formSave.init()
   // dragAndDrop.init()
   // choiceFile.init()
   // copyLink.init()
-  // formInputs.init()
-  // maskTel.init()
+  formInputs.init()
+  maskTel.init()
   // password.init()
   // quantity.init()
   // range.init()
@@ -96,12 +96,6 @@ window.addEventListener('DOMContentLoaded', () => {
   // timeCounter.init()
   // timer.init()
   // worldMap.init()
-})
-
-window.addEventListener('load', () => {
-  gsap.init()
   preloader.init()
   animation.init()
-  // yandexMap.init()
-  // warning.init()
 })

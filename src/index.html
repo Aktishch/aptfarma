@@ -10,7 +10,7 @@
 <!-- Главный блок -->
 
 <main class="container relative overflow-hidden pt-28 pb-10 xs:pt-32 sm:pt-36 md:pb-0 xl:pt-52">
-  <div class="absolute inset-0" data-speed="1.1">
+  <div class="absolute inset-0">
     <img class="hidden lg:block absolute left-1/2 -top-2 xl:-top-5 -translate-x-1/2 w-full max-w-[100px] xl:max-w-[140px]" src="img/pictures/jar.svg" alt="">
     <img class="hidden lg:block absolute -top-[100px] xl:-top-[100px] -left-[100px] xl:-left-[250px] w-full max-w-[300px] xl:max-w-[560px]" src="img/pictures/tablet.svg" alt="">
     <img class="hidden md:block absolute left-4 xl:left-[96px] bottom-[500px] xl:bottom-[210px] w-full max-w-[100px] lg:max-w-[200px]" src="img/pictures/pack.svg" alt="">
@@ -124,7 +124,7 @@
 ] %>
 
 <section class="container relative overflow-hidden">
-  <div class="absolute inset-0" data-speed="1.1">
+  <div class="absolute inset-0">
     <img class="hidden lg:block absolute top-[100px] xl:top-[220px] xl:-left-5 w-full max-w-[150px] xl:max-w-[305px]" src="img/pictures/pill-big.svg" alt="">
     <img class="hidden lg:block absolute bottom-5 right-0 xl:-right-20 w-full max-w-[150px] xl:max-w-[390px]" src="img/pictures/tube.svg" alt="">
   </div>
@@ -217,7 +217,7 @@
 ] %>
 
 <section class="container container--xs relative overflow-hidden">
-  <div class="absolute inset-0" data-speed="1.1">
+  <div class="absolute inset-0">
     <img class="hidden lg:block absolute -left-[50px] bottom-[200px] w-full max-w-[200px] xl:max-w-[360px]" src="img/pictures/thermometer.svg" alt="">
     <img class="hidden lg:block absolute -right-[64px] bottom-[120px] w-full max-w-[200px] xl:max-w-[320px]" src="img/pictures/patch.svg" alt="">
   </div>
@@ -290,7 +290,7 @@
 ] %>
 
 <section class="container relative overflow-hidden pb-0">
-  <div class="absolute inset-0" data-speed="1.1">
+  <div class="absolute inset-0">
     <img class="hidden lg:block absolute top-10 left-10 xl:top-[100px] xl:left-[100px] w-full max-w-[150px] xl:max-w-[230px]" src="img/pictures/pills.svg" alt="">
     <img class="hidden lg:block absolute right-2 xl:right-8 bottom-5 xl:-rotate-[30deg] w-full max-w-[150px] xl:max-w-[220px]" src="img/pictures/syringe.svg" alt="">
   </div>
@@ -477,7 +477,7 @@
 ] %>
 
 <section class="container relative overflow-hidden" data-listing="3">
-  <div class="absolute inset-0" data-speed="1.1">
+  <div class="absolute inset-0">
     <img class="hidden xl:block absolute -left-12 top-0 w-full max-w-[300px]" src="img/pictures/patch-big.svg" alt="">
     <img class="hidden xl:block absolute right-4 top-0 w-full max-w-[300px]" src="img/pictures/pill-open.svg" alt="">
     <img class="hidden xl:block absolute -left-4 top-[400px] w-full max-w-[300px]" src="img/pictures/tablet.svg" alt="">
@@ -538,6 +538,113 @@
     </div>
     <div class="lg:hidden duration-5 anim anim--up" data-anim="hidden">
       <button class="btn btn-second btn-md btn-fill mx-auto mt-10" data-listing-show>Показать ещё</button>
+    </div>
+  </div>
+</section>
+
+<!-- Специалисты -->
+
+<% var specialists = [
+  {
+    bg: 'bg-second',
+    text: '3 000 000 рублей ежемесячный ФОТ команды'
+  },
+  {
+    bg: 'bg-primary',
+    text: 'Ставим KPI и контролируем их выполнение'
+  },
+  {
+    bg: 'bg-primary',
+    text: 'Отчитываемся в удобном для вас режиме'
+  }
+] %>
+
+<section class="container relative overflow-hidden">
+  <div class="absolute inset-0">
+    <img class="hidden lg:block absolute top-[200px] -left-10 rotate-[75deg] w-full max-w-[200px] xl:max-w-[300px]" src="img/pictures/pack-height.svg" alt="">
+    <img class="hidden lg:block absolute top-[200px] -right-16 -rotate-[20deg] w-full max-w-[200px] xl:max-w-[300px]" src="img/pictures/tube.svg" alt="">
+  </div>
+  <div class="relative">
+    <h2 class="font-normal uppercase text-26 sm:text-30 md:text-36 leading-3 mb-4 duration-5 anim anim--right" data-anim="hidden">
+      <span class="font-semibold">30 СПЕЦИАЛИСТОВ</span> ЕЖЕДНЕВНО РАБОТАЮТ НАД РЕШЕНИЕМ ОПЕРАЦИОННЫХ ЗАДАЧ
+    </h2>
+    <h3 class="font-normal text-14 md:text-16 leading-5 mb-7 lg:mb-14 duration-5 anim anim--right" data-anim="hidden">
+      Забираем всю рутину на себя, полностью высвобождая ваше время.
+    </h3>
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-5 sm:gap-7 w-full xl:max-w-[730px]">
+      <% for (var i = 0; i < specialists.length; i++) { %>
+      <div class="duration-5 anim anim--up" data-anim="hidden">
+        <div class="flex items-center <%= specialists[i].bg %> rounded-[26px_0px_26px_26px] min-h-[100px] sm:min-h-[125px] p-4 sm:p-6">
+          <h4 class="font-bold text-white text-20 sm:text-24 leading-1"><%= specialists[i].text %></h4>
+        </div>
+      </div>
+      <% } %>
+    </div>
+    <img class="block xl:absolute xl:-right-5 xl:bottom-0 w-full max-w-[530px] mx-auto xl:mx-0 mt-5 sm:mt-7 xl:mt-0 duration-7 anim anim--left" data-anim="hidden" src="img/pictures/specialists-img.svg" alt="">
+  </div>
+</section>
+
+<!-- Обратная связь -->
+
+<section class="container relative overflow-hidden">
+  <div class="absolute inset-0">
+    <img class="hidden lg:block absolute top-[200px] -left-20 rotate-[110deg] w-full max-w-[200px]" src="img/pictures/pack.svg" alt="">
+    <img class="hidden lg:block absolute top-20 -right-[120px] w-full max-w-[200px] xl:max-w-[300px]" src="img/pictures/patch-big.svg" alt="">
+  </div>
+  <div class="flex items-end justify-between gap-5 relative">
+    <div class="w-full lg:max-w-[530px]">
+      <h2 class="font-normal uppercase text-26 sm:text-30 md:text-36 leading-3 mb-4 duration-5 anim anim--right" data-anim="hidden">
+        <span class="font-semibold">ЭКСКУРСИЯ ПО БИЗНЕСУ</span> СЕТИ АПТЕК ФАРМА
+      </h2>
+      <h3 class="font-normal text-14 md:text-16 leading-5 mb-7 lg:mb-14 duration-5 anim anim--right" data-anim="hidden">
+        Посмотрите, как мы управляем процессами и оцените насколько это подходит вам
+      </h3>
+      <form class="form w-full max-w-[440px] duration-5 anim anim--up" data-form="submit" data-anim="hidden">
+        <input type="hidden" value="Экскурсия по бизнесу" name="theme">
+        <label class="form-label mb-5" data-label="input">
+          <span class="font-normal text-16 sm:text-20 leading-1 mb-2">Имя</span>
+          <div class="form-wrapper">
+            <div class="input-cover">
+              <input class="input input-gray input-md" data-input="name" type="text" placeholder="Иван Иванов" name="name">
+            </div>
+            <span class="form-error" data-error>Пожалуйста, введите ваше имя!</span>
+          </div>
+        </label>
+        <label class="form-label mb-5" data-label="input">
+          <span class="font-normal text-16 sm:text-20 leading-1 mb-2">Телефон</span>
+          <div class="form-wrapper">
+            <div class="input-cover">
+              <input class="input input-gray input-md" data-input="tel" type="tel" placeholder="+7 999 999 99 99" name="tel">
+            </div>
+            <span class="form-error" data-error>Пожалуйста, введите ваш номер!</span>
+          </div>
+        </label>
+        <label class="form-label mb-5 md:mb-12" data-label="input">
+          <span class="font-normal text-16 sm:text-20 leading-1 mb-2">E-mail</span>
+          <div class="form-wrapper">
+            <div class="input-cover">
+              <input class="input input-gray input-md" data-input="email" type="text" placeholder="email@email.com" name="email">
+            </div>
+            <span class="form-error" data-error>Пожалуйста, введите корректный адрес!</span>
+          </div>
+        </label>
+        <button class="btn btn-primary btn-md sm:btn-lg btn-fill uppercase text-18 sm:text-24" data-waved="light" type="submit">ОТПРАВИТЬ</button>
+      </form>
+    </div>
+    <div class="hidden lg:block w-full max-w-[600px]">
+      <div class="pack pack-box bg-grey rounded-[40px_500px_500px_500px] border-[3px] border-solid border-white shadow-lg h-full duration-7 anim anim--left" data-movement="light" data-anim="hidden">
+        <div class="loader">
+          <span class="loader-progress">
+            <svg class="loader-icon icon">
+              <use xlink:href="img/icons.svg#loader">
+            </svg>
+          </span>
+        </div>
+        <picture>
+          <source srcset="img/pictures/feedback-img.webp" type="image/webp">
+          <img class="image image-rise" loading="lazy" src="img/pictures/feedback-img.jpg" alt="">
+        </picture>
+      </div>
     </div>
   </div>
 </section>

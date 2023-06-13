@@ -53,7 +53,7 @@ module.exports = plugin(({ addComponents, matchComponents, theme }) => {
       },
 
       '&--error': {
-        borderColor: theme('colors.primary.DEFAULT'),
+        borderColor: theme('colors.second.DEFAULT'),
       },
 
       '&:-webkit-autofill': {
@@ -72,7 +72,7 @@ module.exports = plugin(({ addComponents, matchComponents, theme }) => {
         if (!parsed.color) return null
 
         return {
-          '--input-color': formatColor({ mode: 'rgba', color: parsed.color, alpha: 0.3 }),
+          '--input-color': formatColor({ mode: 'rgba', color: parsed.color, alpha: 0.8 }),
           '--input-focus': color.DEFAULT,
         }
       },
