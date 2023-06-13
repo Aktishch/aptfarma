@@ -3,10 +3,11 @@ import fancybox from './lib/fancybox'
 // import sliderSwiper from './lib/slider-swiper'
 // import yandexMap from './lib/yandex-map'
 // import airDatepicker from './lib/air-datepicker'
-import gsap from './lib/gsap'
+// import gsap from './lib/gsap'
 
 // Scripts
 // import scrollHeader from './ts/scroll-header'
+import smoothScroll from './ts/smooth-scroll'
 import currentTab from './ts/current-tab'
 // import mobileMenu from './ts/mobile-menu'
 // import progressLine from './ts/progress-line'
@@ -57,6 +58,7 @@ window.addEventListener('DOMContentLoaded', () => {
   fancybox.init()
   // sliderSwiper.init()
   // airDatepicker.init()
+  smoothScroll.init()
   currentTab.init()
   // // scrollHeader.init()
   // mobileMenu.init()
