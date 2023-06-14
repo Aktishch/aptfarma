@@ -38,10 +38,6 @@ module.exports = plugin(({ addComponents, matchComponents, theme }) => {
         borderColor: 'var(--input-focus)',
       },
 
-      '&::placeholder': {
-        color: theme('colors.gray.DEFAULT'),
-      },
-
       '&[disabled]': {
         pointerEvents: 'none',
         opacity: 0.5,

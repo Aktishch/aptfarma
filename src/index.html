@@ -711,4 +711,129 @@
   </div>
 </section>
 
+<!-- Результат -->
+
+<% var result = [
+  {
+    number: '>100 000',
+    icon: 'img/icons.svg#google',
+    text: 'человек ежемесячно ищут наши аптеки в сети Интернет'
+  },
+  {
+    number: '100%',
+    icon: 'img/icons.svg#box',
+    text: 'сохранили всех своих клиентов и долю в регионе тем же количеством аптек, несмотря на открытие новых 80 аптек федеральных сетей'
+  },
+  {
+    number: '94%',
+    icon: 'img/icons.svg#star',
+    text: 'положительных отзывов на 5 звёзд, рейтинг 4.9+'
+  },
+  {
+    number: '75%',
+    icon: 'img/icons.svg#card',
+    text: 'доля покупок по карте лояльности свидетельствует о высоком уровне клиентского сервиса'
+  }
+] %>
+
+<section class="container relative overflow-hidden">
+  <div class="absolute inset-0">
+    <img class="hidden lg:block absolute xl:bottom-[100px] -left-20 -rotate-45 w-full max-w-[300px]" src="img/pictures/pack-min.svg" alt="">
+    <img class="hidden lg:block absolute top-[140px] right-20 w-full max-w-[150px]" src="img/pictures/jar.svg" alt="">
+  </div>
+  <div class="relative">
+    <h2 class="font-normal uppercase text-26 sm:text-30 md:text-36 leading-3 mb-7 lg:mb-14 duration-5 anim anim--right" data-anim="hidden">
+      <span class="font-semibold">ВЫ СТАНОВИТЕСЬ ЧАСТЬЮ ИЗВЕСТНОГО БРЕНДА,</span> КОТОРОМУ ДОВЕРЯЮТ ПОКУПАТЕЛИ
+    </h2>
+    <div class="flex flex-col xl:items-end relative">
+      <img class="order-2 block xl:absolute lg:-left-[180px] lg:bottom-0 w-full max-w-[530px] xl:max-w-[790px] mx-auto xl:mx-0 duration-5 anim anim--right" data-anim="hidden" src="img/pictures/result-img.svg" alt="">
+      <div class="order-1 grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-7 relative w-full xl:max-w-[540px] mb-7 xl:mb-0">
+        <% for (var i = 0; i < result.length; i++) { %>
+        <div class="duration-5 anim anim--up" data-anim="hidden">
+          <div class="card rounded-[26px_26px_0px_26px] h-full" data-waved="dark">
+            <div class="flex items-center justify-between gap-3 bg-primary text-white rounded-[26px_0px_26px_26px] py-4 px-4 sm:py-5 sm:px-6">
+              <h4 class="font-bold text-20 sm:text-24 leading-1"><%= result[i].number %></h4>
+              <svg class="icon text-24 sm:text-28">
+                <use xlink:href="<%= result[i].icon %>">
+              </svg>
+            </div>
+            <div class="card-content pt-3 pb-5 px-4 sm:pb-7 sm:px-6">
+              <p class="font-normal text-15 leading-5"><%= result[i].text %></p>
+            </div>
+          </div>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Отзывы -->
+
+<% var reviews = [
+  {
+    anim: 'anim--right',
+    img: '1',
+    title: 'Сергей Шуляк',
+    subtitle: 'генеральный директор DSM GROU',
+    text: [
+      'В условиях агрессивного конкурентного окружения как никогда стоит вопрос эффективности аптечного бизнеса. Процессы управления сетями сложные и трудозатратные, как по ресурсам, так и по времени. Можно все делать самим, набрав штат маркетологов, управленцев, программистов. Действовать, искать пути решения проблем. Это займет у вас длительное время, а следовательно, и деньги.',
+      'Можно воспользоваться опытом и ошибками других. В том смысле, что вы уже не будете их совершать, и ваш путь к успеху будет значительно быстрее. Аптека Фарма – одна из лучших компаний, предоставляющих аптекам комплекс маркетинговых услуг, позволяющий вашему бизнесу не выживать, а расти быстрее конкурентов!'
+    ]
+  },
+  {
+    anim: 'anim--left',
+    img: '2',
+    title: 'Евгений Коротков',
+    subtitle: 'генеральный директор маркетинговой ассоциации «ПроАптека»',
+    text: [
+      'При запуске программы поддержки компетенциями участников ПроАптеки мы проводили детальный анализ моделей управления аптечными компаниями на территории России. Изучали как опыт крупных федеральных сетей, так и локальных игроков – успешных в рамках своих территорий.',
+      'Одним из ярких примеров эффективной модели управления является «Аптека Фарма», что позволяет им качественно выполнять маркетинговые мероприятия, получать повышенные бюджеты от производителей, работать с оптимальным товарным запасом, эффективной моделью ценообразования, поддерживать интересную для потребителя и сотрудников аптек систему лояльности. Часть наработок ПроАптека использует для трансляции своим участникам в качестве «лучших практик», включая улучшенный справочник товарных категорий с рассчитанными показателями эластичности спроса по цене.',
+      'Если вы выбираете партнера, которому можно доверить свой бизнес в управление, то команда Александра Миронова с его проектом франшиза «Аптека Фарма» должна быть в обязательном списке для внимательного изучения.',
+      'РЕКОМЕНДУЮ.'
+    ]
+  }
+] %>
+
+<section class="container relative overflow-hidden">
+  <div class="absolute inset-0"></div>
+  <div class="relative">
+    <h2 class="font-semibold uppercase text-26 sm:text-30 md:text-36 leading-3 mb-7 lg:mb-14 duration-5 anim anim--right" data-anim="hidden">ЧТО ГОВОРЯТ О НАС ЭКСПЕРТЫ</h2>
+    <div class="flex flex-col gap-5 sm:gap-8 lg:gap-12">
+      <% for (var i = 0; i < reviews.length; i++) { %>
+      <div class="duration-5 anim <%= reviews[i].anim %>" data-anim="hidden">
+        <div class="card rounded-[50px_5px_50px_5px] py-6 pl-4 pr-4 sm:py-8 sm:pl-6 sm:pr-6 lg:pl-16 lg:pr-9" data-waved="dark">
+          <div class="card-content lg:flex-row lg:justify-between gap-5 lg:gap-7">
+            <div class="w-full max-w-[150px] sm:max-w-[200px]">
+              <div class="pack pack-box bg-grey rounded-[50px]">
+                <div class="loader">
+                  <span class="loader-progress">
+                    <svg class="loader-icon icon">
+                      <use xlink:href="img/icons.svg#loader">
+                    </svg>
+                  </span>
+                </div>
+                <picture>
+                  <source srcset="img/pictures/specialist-<%= reviews[i].img %>.webp" type="image/webp">
+                  <img class="image" loading="lazy" src="img/pictures/specialist-<%= reviews[i].img %>.png" alt="">
+                </picture>
+              </div>
+            </div>
+            <div class="w-full max-w-[760px]">
+              <div class="flex flex-col gap-4">
+                <h3 class="font-semibold text-20 sm:text-24 leading-2"><%= reviews[i].title %></h3>
+                <h4 class="font-medium text-14 sm:text-16 leading-5"><%= reviews[i].subtitle %></h4>
+                <% for (var j = 0; j < reviews[i].text.length; j++) { %>
+                <p class="font-normal text-14 sm:text-16 leading-5"><%= reviews[i].text[j] %></p>
+                <% } %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+
 <%= require('./includes/footer.html').default %>
