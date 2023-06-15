@@ -263,6 +263,132 @@
   </div>
 </section>
 
+<!-- Опросник -->
+
+<% var questionnaire = [
+  {
+    flex: 'lg:flex-row',
+    number: '01',
+    text: 'Ощущение, что в мозгах застой, а в бизнесе болото. Не сил двигаться дальше.',
+    img: '1'
+  },
+  {
+    flex: 'lg:flex-row-reverse',
+    number: '02',
+    text: 'Крупные конкуренты давят, открывают новые аптеки и уводят клиентов.',
+    img: '2'
+  },
+  {
+    flex: 'lg:flex-row',
+    number: '03',
+    text: 'Поставщики не предоставляют выгодные условия, такие же как для крупных сетей',
+    img: '3'
+  },
+  {
+    flex: 'lg:flex-row-reverse',
+    number: '04',
+    text: 'Вам недостает компетентных кадров, готовых работать и развиваться',
+    img: '4'
+  },
+  {
+    flex: 'lg:flex-row',
+    number: '05',
+    text: 'Скромный бюджет на рекламу и маркетинг не позволяет увеличить число клиентов',
+    img: '5'
+  },
+  {
+    flex: 'lg:flex-row-reverse',
+    number: '06',
+    text: 'Доход не растет, а усилия что-либо изменить не приносят результат',
+    img: '6'
+  }
+] %>
+
+<section class="questionnaire container relative overflow-hidden" data-questionnaire>
+  <div class="absolute inset-0"></div>
+  <div class="relative">
+    <h2 class="font-normal uppercase text-26 sm:text-30 md:text-36 leading-3 mb-7 lg:mb-14 duration-5 anim anim--right" data-anim="hidden">
+      <span class="font-semibold">КОМУ ПОДХОДИТ</span> УПРАВЛЕНЧЕСКАЯ ФРАНШИЗА?
+    </h2>
+    <div class="flex flex-col gap-4 sm:gap-8 lg:gap-14 mb-10 lg:mb-20 xl:mb-36">
+      <% for (var i = 0; i < questionnaire.length; i++) { %>
+      <div class="flex flex-col <%= questionnaire[i].flex %> lg:items-center lg:justify-between gap-5" data-filter>
+        <div class="w-full lg:max-w-[410px]">
+          <div class="flex flex-col items-start">
+            <h4 class="font-bold text-grey text-6xl sm:text-7xl leading-1 mb-5 lg:mb-10"><%= questionnaire[i].number %></h4>
+            <p class="font-medium text-18 sm:text-24 leading-3 mb-5 lg:mb-10"><%= questionnaire[i].text %></p>
+            <div class="flex items-center bg-grey rounded-full">
+              <label class="questionnaire__category filter-active btn btn-second btn-sm font-medium text-black text-24 w-[96px] px-5" data-filter-category="category-1" data-waved="light">
+                <input class="hidden" data-questionnaire-input="yes" type="radio" name="questionnaire-<%= questionnaire[i].img %>" checked>
+                Да
+              </label>
+              <label class="questionnaire__category btn btn-primary btn-sm text-black font-medium text-24 w-[96px] px-5" data-filter-category="category-2" data-waved="light">
+                <input class="hidden" data-questionnaire-input="no" type="radio" name="questionnaire-<%= questionnaire[i].img %>">
+                Нет
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="w-full max-w-[540px] mx-auto lg:mx-0">
+          <div class="questionnaire__card" data-filter-card="category-1">
+            <div class="pack pack-rect-sm">
+              <img class="image image-scale-down" src="img/pictures/questionnaire-<%= questionnaire[i].img %>-1.svg" alt="">
+            </div>
+          </div>
+          <div class="questionnaire__card hidden" data-filter-card="category-2">
+            <div class="pack pack-rect-sm">
+              <img class="image image-scale-down" src="img/pictures/questionnaire-<%= questionnaire[i].img %>-2.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <% } %>
+    </div>
+    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5 lg:gap-0">
+      <div class="w-full lg:max-w-[540px]">
+        <div class="flex flex-col items-start">
+          <div class="flex items-center justify-center bg-second font-medium rounded-full h-[60px] lg:h-[92px] py-5 px-5 lg:px-12 mb-4 lg:mb-8" data-questionnaire-result>
+            <p class="text-center text-white text-20 lg:text-32">
+              <span data-questionnaire-quantity></span> из 6 «ДА»
+            </p>
+          </div>
+          <h2 class="font-semibold uppercase text-26 sm:text-30 md:text-36 leading-3 mb-4" data-questionnaire-title></h2>
+          <p class="font-normal text-14 sm:text-16 leading-5 mb-6 lg:mb-10" data-questionnaire-text></p>
+          <form class="form w-full max-w-[380px]" data-questionnaire-form data-form="submit">
+            <input data-questionnaire-name type="hidden" value="Квиз" name="theme">
+            <label class="form-label mb-5" data-label="input">
+              <span class="font-normal text-16 sm:text-20 leading-1 mb-2">Имя</span>
+              <div class="form-wrapper">
+                <div class="input-cover">
+                  <input class="input input-gray input-md" data-input="name" type="text" placeholder="Иван Иванов" name="name">
+                </div>
+                <span class="form-error" data-error>Пожалуйста, введите ваше имя!</span>
+              </div>
+            </label>
+            <label class="form-label mb-5 md:mb-12" data-label="input">
+              <span class="font-normal text-16 sm:text-20 leading-1 mb-2">Телефон</span>
+              <div class="form-wrapper">
+                <div class="input-cover">
+                  <input class="input input-gray input-md" data-input="tel" type="tel" placeholder="+7 999 999 99 99" name="tel">
+                </div>
+                <span class="form-error" data-error>Пожалуйста, введите ваш номер!</span>
+              </div>
+            </label>
+            <button class="btn btn-primary btn-md sm:btn-lg btn-fill uppercase text-18 sm:text-24" data-waved="light" type="submit">
+              <span data-questionnaire-button></span>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="w-full max-w-[540px] lg:max-w-[600px] mx-auto lg:mx-0">
+        <img class="block w-full" data-questionnaire-image="anxiety" src="img/pictures/questionnaire-result-1.svg" alt="">
+        <img class="hidden w-full" data-questionnaire-image="good" src="img/pictures/questionnaire-result-2.svg" alt="">
+        <img class="hidden w-full" data-questionnaire-image="improvement" src="img/pictures/questionnaire-result-3.svg" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Управление -->
 
 <% var control = [

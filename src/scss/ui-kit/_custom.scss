@@ -31,20 +31,3 @@ $close: ".carousel__button.is-close";
     }
   }
 }
-
-// Slider-swiper
-.swiper {
-  &-pagination-bullet {
-    @apply bg-current w-3 h-3 duration-2;
-  }
-
-  &-button {
-
-    &-prev,
-    &-next {
-      &::after {
-        @apply hidden;
-      }
-    }
-  }
-}

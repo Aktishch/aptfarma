@@ -1,0 +1,24 @@
+// Опросник
+.questionnaire {
+  &__category.filter-active {
+    @apply btn-fill text-white pointer-events-none;
+  }
+
+  &__card.filter-show {
+    animation: filtering-show 0.3s ease both 1;
+  }
+}
+
+@keyframes filtering-show {
+  0% {
+    transform: translateY(50px);
+
+    @apply opacity-0;
+  }
+
+  100% {
+    transform: translateY(0);
+
+    @apply opacity-100;
+  }
+}

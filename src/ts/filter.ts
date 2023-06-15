@@ -23,26 +23,15 @@ const init = (): void => {
 
     if (!filter) return
 
-    const hash: string = window.location.hash.substr(1)
     const categories = filter.querySelectorAll('*[data-filter-category]') as NodeListOf<Element>
     const categoryActive = filter.getElementsByClassName('filter-active') as HTMLCollectionOf<Element>
-    const line = filter.querySelector('*[data-filter-line]') as HTMLElement
     const cards = filter.querySelectorAll('*[data-filter-card]') as NodeListOf<Element>
-
-    if (line) line.style.width = `${(categories[0] as HTMLElement).offsetWidth}px`
 
     const currentCard = (category: HTMLElement): void => {
       const name = String(category.dataset.filterCategory)
 
-      if (categoryActive[0]) {
-        categoryActive[0].className = categoryActive[0].className.replace('filter-active', '')
-        category.classList.add('filter-active')
-      }
-
-      if (line) {
-        line.style.width = `${category.offsetWidth}px`
-        line.style.left = `${category.offsetLeft}px`
-      }
+      categoryActive[0].className = categoryActive[0].className.replace('filter-active', '')
+      category.classList.add('filter-active')
 
       filtering(name, cards)
     }
@@ -54,16 +43,6 @@ const init = (): void => {
         currentCard(category)
       }) as EventListener)
     })
-
-    if (hash && hash != '') {
-      for (const [index, card] of cards.entries()) {
-        if (card.querySelector(`#${hash}`)) {
-          const category = categories[index] as HTMLElement
-
-          currentCard(category)
-        }
-      }
-    }
   })
 }
 

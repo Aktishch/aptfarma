@@ -4,7 +4,10 @@
     &::after {
       background-image: radial-gradient(circle closest-side, theme("colors.white.DEFAULT"), transparent);
 
-      @apply opacity-30;
+      transform : translate(-50%, -50%) translate(var(--x), var(--y));
+      transition: width 0.3s ease, height 0.3s ease;
+
+      @apply content-[""] absolute z-[1] top-0 left-0 opacity-30 pointer-events-none w-0 h-0;
     }
 
     @media(hover) {
@@ -12,26 +15,5 @@
         @apply w-[250px] h-[250px];
       }
     }
-  }
-
-  &[data-movement="blend"] {
-    &::after {
-      @apply bg-white rounded-max mix-blend-difference;
-    }
-
-    @apply relative;
-
-    @media(hover) {
-      &:hover::after {
-        @apply w-[70px] h-[70px];
-      }
-    }
-  }
-
-  &::after {
-    transform : translate(-50%, -50%) translate(var(--x), var(--y));
-    transition: width 0.3s ease, height 0.3s ease;
-
-    @apply content-[""] absolute z-[1] top-0 left-0 pointer-events-none w-0 h-0;
   }
 }
