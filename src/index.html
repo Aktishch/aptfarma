@@ -37,7 +37,7 @@
       </div>
     </div>
     <div class="flex flex-col xl:flex-row xl:justify-between">
-      <div class="flex flex-col items-start mb-10 xl:mb-0">
+      <div class="flex flex-col items-start xl:mb-0">
         <div class="order-2 sm:order-1 flex flex-col gap-3 sm:mb-8 xl:mb-14 duration-5 delay-2 anim anim--right" data-anim="hidden">
           <div class="flex items-center">
             <span class="icon bg-second rounded-max text-10 mr-3"></span>
@@ -75,7 +75,7 @@
           </div>
         </div>
       </div>
-      <div class="pack pack-box bg-grey rounded-[40px_500px_500px_500px] border-[3px] border-solid border-white shadow-lg w-full max-w-[600px] xl:max-w-[435px] sm:mb-10 xl:mb-0 mx-auto xl:mx-0 duration-7 delay-2 anim anim--left" data-movement="light" data-anim="hidden">
+      <div class="hidden xl:block pack pack-box bg-grey rounded-[40px_500px_500px_500px] border-[3px] border-solid border-white shadow-lg w-full max-w-[435px] sm:mb-10 xl:mb-0 mx-auto xl:mx-0 duration-7 delay-2 anim anim--left" data-movement="light" data-anim="hidden">
         <div class="loader">
           <span class="loader-progress">
             <svg class="loader-icon icon">
@@ -167,49 +167,37 @@
 
 <% var conditions = [
   {
-    hidden: '',
     delay: '',
-    data: '',
     title: 'Управляем всеми процессами',
     icon: 'img/icons.svg#arrows',
     text: 'От ассортимента и ценообразования до кадров и хозяйственного блока.'
   },
   {
-    hidden: '',
     delay: 'xl:delay-2',
-    data: '',
     title: 'Бизнес остаётся за вами',
     icon: 'img/icons.svg#case',
     text: 'Работаем без изменений в уставных документах.'
   },
   {
-    hidden: '',
     delay: '',
-    data: '',
     title: 'Делаем частью известного бренда',
     icon: 'img/icons.svg#planet',
     text: 'Только в сети Интернет наши аптеки ищут более 100 000 человек в месяц.'
   },
   {
-    hidden: 'hidden sm:block',
     delay: 'xl:delay-2',
-    data: 'data-listing-item',
     title: '100% прибыли отдаем вам',
     icon: 'img/icons.svg#money',
     text: 'Мы получаем только фиксированную оплату за управление каждой аптекой.'
   },
   {
-    hidden: 'hidden sm:block',
     delay: '',
-    data: 'data-listing-item',
     title: 'Результат заметен с 1 месяца',
     icon: 'img/icons.svg#marketing',
     text: 'За счет увеличения маркетинга до 7-8% от закупки и отсрочки платежа до 45 дней.'
   },
   {
-    hidden: 'hidden sm:block',
     delay: 'xl:delay-2',
-    data: 'data-listing-item',
     title: 'Без паушального взноса и роялти',
     icon: 'img/icons.svg#rocket',
     text: 'Просто начать и легко выйти, если вас что-либо не устроит.'
@@ -221,12 +209,12 @@
     <img class="hidden lg:block absolute -left-[50px] bottom-[200px] w-full max-w-[200px] xl:max-w-[360px]" src="img/pictures/thermometer.svg" alt="">
     <img class="hidden lg:block absolute -right-[64px] bottom-[120px] w-full max-w-[200px] xl:max-w-[320px]" src="img/pictures/patch.svg" alt="">
   </div>
-  <div class="relative" data-listing>
+  <div class="relative">
     <h2 class="font-semibold uppercase text-26 sm:text-30 md:text-36 leading-3 mb-7 lg:mb-14 duration-5 anim anim--right" data-anim="hidden">ПРОЗРАЧНЫЕ <br class="sm:hidden"> И ВЫГОДНЫЕ УСЛОВИЯ</h2>
     <div class="grid grid-cols-1 xl:grid-cols-3 xl:gap-7">
       <div class="xl:col-2 grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-7">
         <% for (var i = 0; i < conditions.length; i++) { %>
-        <div class="<%= conditions[i].hidden %> duration-5 <%= conditions[i].delay %> anim anim--right" data-anim="hidden" <%= conditions[i].data %>>
+        <div class="duration-5 <%= conditions[i].delay %> anim anim--right" data-anim="hidden">
           <div class="card rounded-[26px_26px_0px_26px] h-full">
             <div class="flex items-center justify-between gap-3 bg-primary text-white rounded-[26px_26px_0px_26px] min-h-[60px] sm:min-h-[84px] py-4 pl-3 pr-3 md:pr-4 md:pl-6">
               <h4 class="font-semibold text-18 md:text-24 leading-1"><%= conditions[i].title %></h4>
@@ -256,9 +244,6 @@
           </picture>
         </div>
       </div>
-    </div>
-    <div class="sm:hidden duration-5 anim anim--up" data-anim="hidden">
-      <button class="btn btn-second btn-md btn-fill mx-auto mt-10" data-listing-show>Показать ещё</button>
     </div>
   </div>
 </section>
@@ -715,7 +700,7 @@
       </div>
       <% } %>
     </div>
-    <img class="block xl:absolute xl:-right-5 xl:bottom-0 w-full max-w-[530px] mx-auto xl:mx-0 mt-5 sm:mt-7 xl:mt-0 duration-7 anim anim--left" data-anim="hidden" src="img/pictures/specialists-img.svg" alt="">
+    <img class="block xs:hidden xl:block xs:absolute xs:-right-5 xs:bottom-0 w-full max-w-[530px] mx-auto xs:mx-0 mt-5 xs:mt-0 duration-7 anim anim--left" data-anim="hidden" src="img/pictures/specialists-img.svg" alt="">
   </div>
 </section>
 
@@ -881,8 +866,8 @@
       <span class="font-semibold">ВЫ СТАНОВИТЕСЬ ЧАСТЬЮ ИЗВЕСТНОГО БРЕНДА,</span> КОТОРОМУ ДОВЕРЯЮТ ПОКУПАТЕЛИ
     </h2>
     <div class="flex flex-col xl:items-end relative">
-      <img class="order-2 block xl:absolute lg:-left-[180px] lg:bottom-0 w-full max-w-[530px] xl:max-w-[790px] mx-auto xl:mx-0 duration-5 anim anim--right" data-anim="hidden" src="img/pictures/result-img.svg" alt="">
-      <div class="order-1 grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-7 relative w-full xl:max-w-[540px] mb-7 xl:mb-0">
+      <img class="order-2 block xs:hidden xl:block xs:absolute xs:-left-[180px] xs:bottom-0 w-full max-w-[530px] xs:max-w-[790px] mt-7 xs:mt-0 mx-auto xs:mx-0 duration-5 anim anim--right" data-anim="hidden" src="img/pictures/result-img.svg" alt="">
+      <div class="order-1 grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-7 relative w-full xl:max-w-[540px]">
         <% for (var i = 0; i < result.length; i++) { %>
         <div class="duration-5 anim anim--up" data-anim="hidden">
           <div class="card rounded-[26px_26px_0px_26px] h-full">
