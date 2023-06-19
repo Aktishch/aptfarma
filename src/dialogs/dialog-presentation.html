@@ -1,0 +1,38 @@
+<div class="dialog dialog-xs rounded-7 overflow-hidden">
+  <div class="bg-second rounded-7 py-5 px-4 xs:py-7 xs:px-7">
+    <h2 class="font-normal uppercase text-white text-20 xs:text-24 leading-3">
+      <span class="font-semibold">ОСТАВЬТЕ ЗАЯВКУ</span> <br> И МЫ СВЯЖЕМСЯ С ВАМИ
+    </h2>
+  </div>
+  <form class="form py-5 px-4 xs:py-7 xs:px-7" data-form="submit">
+    <input type="hidden" value="Презентация" name="theme">
+    <label class="form-label mb-5" data-label="input">
+      <span class="font-normal text-16 sm:text-20 leading-1 mb-2">Имя</span>
+      <div class="form-wrapper">
+        <div class="input-cover">
+          <input class="input input-gray input-md" data-input="name" type="text" placeholder="Иван Иванов" name="name">
+        </div>
+        <span class="form-error" data-error>Пожалуйста, введите ваше имя!</span>
+      </div>
+    </label>
+    <label class="form-label mb-5" data-label="input">
+      <span class="font-normal text-16 sm:text-20 leading-1 mb-2">Телефон</span>
+      <div class="form-wrapper">
+        <div class="input-cover">
+          <input class="input input-gray input-md" data-input="tel" type="tel" placeholder="+7 999 999 99 99" name="tel">
+        </div>
+        <span class="form-error" data-error>Пожалуйста, введите ваш номер!</span>
+      </div>
+    </label>
+    <label class="form-label mb-5 md:mb-12" data-label="input">
+      <span class="font-normal text-16 sm:text-20 leading-1 mb-2">E-mail</span>
+      <div class="form-wrapper">
+        <div class="input-cover">
+          <input class="input input-gray input-md" data-input="email" type="text" placeholder="email@email.com" name="email">
+        </div>
+        <span class="form-error" data-error>Пожалуйста, введите корректный адрес!</span>
+      </div>
+    </label>
+    <button class="btn btn-primary btn-md sm:btn-lg btn-fill uppercase text-18 sm:text-24" data-waved="light" type="submit">ОТПРАВИТЬ</button>
+  </form>
+</div>

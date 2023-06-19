@@ -23,10 +23,14 @@ $close: ".carousel__button.is-close";
     }
 
     &>#{$close} {
-      @apply fixed top-2 right-2 bg-white text-black shadow-md;
+      @apply fixed top-2 right-2 bg-transparent text-white;
 
       @screen md {
-        @apply absolute;
+        @apply absolute top-0 -right-10;
+      }
+
+      & svg {
+        @apply w-[30px] h-[30px];
       }
     }
   }
